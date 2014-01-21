@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='base.html')),
-
+    url(r'^contact/', include('contact_form.urls')),
     # Examples:
     # url(r'^$', 'beyondthewall_project.views.home', name='home'),
     # url(r'^beyondthewall_project/', include('beyondthewall_project.foo.urls')),
