@@ -211,11 +211,11 @@ DJANGO_APPS = (
 THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
-    'contact_form',
 )
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
+    'contact',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
