@@ -25,12 +25,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': normpath(join(DJANGO_ROOT, 'default.db')),
-        'USER': '',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': get_env_setting('DB_NAME'),
+        'USER': get_env_setting('DB_USER'),
+        'PASSWORD': get_env_setting('DB_PASSWORD'),
         'HOST': '',
         'PORT': '',
+        'OPTIONS': {'autocommit': True,}
     }
 }
 ########## END DATABASE CONFIGURATION
