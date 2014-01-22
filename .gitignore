@@ -18,3 +18,10 @@ build
 *.log
 
 fabsettings.py
+
+# Mac OS X hidden files
+.DS_Store
+
+# Vim swap files
+.*.sw?
+

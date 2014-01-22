@@ -10,23 +10,17 @@
     <title>{% block title %}Beyond the Wall - développement informatique sur mesure{% endblock title %}</title>
 
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" media="screen">
-    
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/main.css' %}" rel="stylesheet">
-    
-	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-	<link rel="stylesheet" href="{% static 'css/component.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
     <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
 	<script src="{% static 'js/Chart.js' %}"></script>
 	<script src="{% static 'js/modernizr.custom.js' %}"></script>
 	
 	
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-
+    
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="{% static 'js/html5shiv.js' %}"></script>
@@ -44,15 +38,11 @@
 				<nav class="gn-menu-wrapper">
 					<div class="gn-scroller">
 						<ul class="gn-menu">
-							<li class="gn-search-item">
-								<input placeholder="Search" type="search" class="gn-search">
-								<a class="gn-icon gn-icon-search"><span>Search</span></a>
-							</li>
 							<li><a href="#home" class="gn-icon gn-icon-home smoothScroll">Home</a></li>
 							<li><a href="#about" class="gn-icon gn-icon-archive smoothScroll">About</a></li>
 							<li><a href="#portfolio" class="gn-icon gn-icon-pictures smoothScroll">Portfolio</a></li>
 							<li><a href="#blog" class="gn-icon gn-icon-article smoothScroll">Blog</a></li>
-							<li><a href="#contact" class="gn-icon gn-icon-envelop smoothScroll">Contact</a></li>
+							<li><a href="#contact" id="contact-link" class="gn-icon gn-icon-envelop smoothScroll">Contact</a></li>
 						</ul>
 					</div><!-- /gn-scroller -->
 				</nav>
@@ -88,14 +78,13 @@
 		</div><!-- /col-lg-6 -->
 	</div><!-- /container -->
 
-	<!-- BEGIN CHART SECTION -->	
+	<!-- BEGIN CHART SECTION 	
 	<div id="chartwrap">
 	<br>
 	<br>
 		<div class="container centered">
 			<div class="col-lg-3"></div>
 			
-				<!-- FIRST CHART -->
 				<div class="col-lg-2">
 					<canvas id="canvas" height="130" width="130"></canvas>
 					<label>Javascript</label>
@@ -104,21 +93,20 @@
 						var doughnutData = [
 								{
 									value: 70,
-									color:"#1abc9c"
+									color:"#2d3441"
 								},
 								{
 									value : 30,
-									color : "#ecf0f1"
+									color : "#64758f"
 								}
 							];
 							var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
 					</script>
 					<br>
 					<br>
-				</div><!-- col-lg-2 -->
+				</div>
 				
 				
-				<!-- SECOND CHART -->
 				<div class="col-lg-2">
 					<canvas id="canvas1" height="130" width="130"></canvas>
 					<label>Photoshop</label>
@@ -127,21 +115,19 @@
 						var doughnutData = [
 								{
 									value: 90,
-									color:"#1abc9c"
+									color:"#2d3441"
 								},
 								{
 									value : 10,
-									color : "#ecf0f1"
+									color : "#64758f"
 								}
 							];
 							var myDoughnut = new Chart(document.getElementById("canvas1").getContext("2d")).Doughnut(doughnutData);
 					</script>
 					<br>
 					<br>
-				</div><!-- col-lg-2 -->
+				</div>
 				
-				
-				<!-- THIRD CHART -->
 				<div class="col-lg-2">
 					<canvas id="canvas2" height="130" width="130"></canvas>
 					<label>Bootstrap</label>
@@ -160,12 +146,12 @@
 					</script>
 					<br>
 					<br>
-				</div><!-- col-lg-2 -->
+				</div>
 
 			<div class="col-lg-3"></div>
-		</div><!-- container -->
-	</div><!-- chartwrap -->
-	
+		</div>
+	</div>
+	-->
 	<section id="portfolio" name="portfolio"></section>
 	<div id="foliowrap">
 		<div class="container">
@@ -287,7 +273,7 @@
 		</div><!-- /container -->
 	</div><!-- /foliowrap -->
 	
-	
+<!--	
 	<section id="blog" name="blog"></section>
 	<div class="container">
 		<div class="row">
@@ -298,14 +284,13 @@
 				<br>
 				<br>
 				
-				<!-- ACCORDION -->
 		            <div class="accordion" id="accordion2">
 		                <div class="accordion-group">
 		                    <div class="accordion-heading">
 		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
 		                        <date>Sep 15, 2013</date> <plus> + </plus> First Class Design
 		                        </a>
-		                    </div><!-- /accordion-heading -->
+		                    </div>
 		                    <div id="collapseOne" class="accordion-body collapse in">
 		                    	<br>
 		                        <div class="accordion-inner">
@@ -314,9 +299,9 @@
 								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 								<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
 								<p><img class="img-circle" src="{% static 'img/avatar.jpg' %}" height="50px" width="50px"> - <i>Alex Webber.</i></p>
-								</div><!-- /accordion-inner -->
-		                    </div><!-- /collapse -->
-		                </div><!-- /accordion-group -->
+								</div>
+		                    </div>
+		                </div>
 		                <br>
 		
 		                <div class="accordion-group">
@@ -328,9 +313,9 @@
 		                    <div id="collapseTwo" class="accordion-body collapse">
 		                        <div class="accordion-inner">
 								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div><!-- /accordion-inner -->
-		                    </div><!-- /collapse -->
-		                </div><!-- /accordion-group -->
+								</div>
+		                    </div>
+		                </div>
 		                <br>
 		
 		                 <div class="accordion-group">
@@ -342,9 +327,9 @@
 		                    <div id="collapseThree" class="accordion-body collapse">
 		                        <div class="accordion-inner">
 								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div><!-- /accordion-inner -->
-		                    </div><!-- /collapse -->
-		                </div><!-- /accordion-group -->
+								</div>
+		                    </div>
+		                </div>
 		                <br>
 		                
 		                 <div class="accordion-group">
@@ -356,16 +341,16 @@
 		                    <div id="collapseFour" class="accordion-body collapse">
 		                        <div class="accordion-inner">
 								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div><!-- /accordion-inner -->
-		                    </div><!-- /collapse -->
-		                </div><!-- /accordion-group -->
+								</div>
+		                    </div>
+		                </div>
 		                <br>			
-					</div><!-- Accordion -->
-				</div><!-- /col-lg-6 -->
+					</div>
+				</div>
 
 			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-	</div><!-- /container -->
+		</div>
+	</div>-->
 	
 	<div id="testimonial">
 		<div class="container">
@@ -402,40 +387,42 @@
 	
 	<section id="contact" name="contact"></section>
 	<div id="footerwrap">
-		<div class="container">
-			<div class="col-lg-5">
-				<h3>Adresse</h3>
-				<p>
-				Beyond the Wall SàRL,<br/>
-				Gregory Favre<br/>
-				Rue de Riant-Coteau 134<br/>
-				CH-1196 Gland<br/>
-				Tél: +41 79 599 09 06
-				</p>
-				<h3>Vie numérique</h3>
-				<p>
-    			   <a href="mailto:info@beyondthewall.ch"><span class='symbol'>circleemail</span> email</a><br />
-    			   <a href="http://www.twitter.com/FavreGregory"><span class='symbol'>circletwitterbird</span> Twitter</a><br />
-    			   <a href="https://www.linkedin.com/in/gregoryfavre"><span class='symbol'>circlelinkedin</span> LinkedIn</a><br />
-    			   <a href="https://github.com/gfavre"><span class='symbol'>circlegithub</span> GitHub</a>
-				</p>
-			</div>
+      <div class="container">
+        <div class="col-lg-5" itemscope itemtype="http://schema.org/LocalBusiness">
+          <h3>Adresse</h3>
+          <p>
+            <h4 itemprop="name">Beyond the Wall SàRL</h4>
+            <span itemprop="founder" itemscope itemtype="http://schema.org/Person">Gregory Favre</span><br/>
+            <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+              <span itemprop="streetAddress">Rue de Riant-Coteau 134</span><br/>
+              <abbr itemprop="addressCountry" title="Switzerland">CH</abbr>-<span itemprop="postalCode">1196</span> <span itemprop="addressLocality">Gland</span><br/>
+            </address>
+            Tél: <a href="tel:+41 79 599 09 06" itemprop="telephone">+41 79 599 09 06</a>
+          </p>
+          <h3>Vie numérique</h3>
+          <p>
+             <a href="mailto:info@beyondthewall.ch"><span class='symbol'>circleemail</span> email</a><br />
+             <a href="http://www.twitter.com/FavreGregory"><span class='symbol'>circletwitterbird</span> Twitter</a><br />
+             <a href="https://www.linkedin.com/in/gregoryfavre"><span class='symbol'>circlelinkedin</span> LinkedIn</a><br />
+             <a href="https://github.com/gfavre"><span class='symbol'>circlegithub</span> GitHub</a>
+          </p>
+		</div>
 			
 			<div class="col-lg-7">
 				<h3>Me contacter</h3>
 				<br>
-				<form role="form" action="{% url 'contact_form' %}" method="post" enctype="plain">{% csrf_token %}
+				<form id="contact-form" action="{% url 'contact_form' %}" method="post">{% csrf_token %}
 				  <div class="form-group">
-				    <label for="name1">Votre nom</label>
-				    <input type="name" name="name" class="form-control" id="name1" placeholder="Votre nom">
+				    <label for="name">Votre nom</label>
+				    <input type="name" name="name" class="form-control" id="name" placeholder="Votre nom" required>
 				  </div>
 				  <div class="form-group">
-				    <label for="email1">Email address</label>
-				    <input type="email" name="email" class="form-control" id="email1" placeholder="nom@domaine.ch">
+				    <label for="email">Email address</label>
+				    <input type="email" name="email" class="form-control" id="email" placeholder="nom@domaine.ch" required>
 				  </div>
 				  <div class="form-group">
-				  	<label>Votre message</label>
-				  	<textarea class="form-control" name="body" rows="3"></textarea>
+				  	<label for="message">Votre message</label>
+				  	<textarea class="form-control" name="body" rows="3" id="message" required></textarea>
 				  </div>
 				  <br>
 				  <input type="submit" class="btn-large btn-theme"></input>
@@ -454,12 +441,54 @@
     <script src="{% static 'js/smoothscroll.js' %}"></script> 
 	<script src="{% static 'js/gnmenu.js' %}"></script>
 	<script>
-		new gnMenu( document.getElementById( 'gn-menu' ) );
+		window.menu = new gnMenu( document.getElementById( 'gn-menu' ) );
 	</script>  
 	<script>
+$(document).ready(function(){
+    $()
 		$('.carousel').carousel({
 		  interval: 5500
 		  })
+        $('#contact-link').click(function(){
+            $('#name').focus();
+        });
+        
+        $('#contact-form').validate({
+	    rules: {
+	      name: {
+	        minlength: 2,
+	        required: true
+	      },
+	      email: {
+	        required: true,
+	        email: true
+	      },
+	      message: {
+	        minlength: 2,
+	        required: true
+	      }
+	    },
+	    
+	    messages: {
+			name: "Ce champ est obligatoire",
+			body: "Ce champ est obligatoire",
+			email: "Merci d'entrer une adresse email valide",
+       
+		},
+	    
+	    
+			highlight: function(element) {
+				$(element).closest('.control-group').removeClass('success').addClass('error');
+			},
+			success: function(element) {
+				element
+				.text('OK!').addClass('valid')
+				.closest('.control-group').removeClass('error').addClass('success');
+			}
+	  });
+
+        
+});
 	</script>
 	
     {% block extra_js %}{% endblock extra_js %}

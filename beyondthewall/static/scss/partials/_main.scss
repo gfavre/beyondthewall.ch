@@ -1,19 +1,6 @@
-/*
- * Author: Carlos Alvarez
- * URL: http://Alvarez.is
- *
- * Project Name: Flat & Scroll 2 - Bootstrap 3 vCard Theme
- * Version: 1.1
- * Date: 09-17-2013
- * URL: http://alvarez.is/demo/fs2/
- */
-
-
-
-
 body {
   padding-top: 50px;
-  background-color: #f2f2f2;
+  background-color: $neutral-color;
     font-family: "Lato";
     font-weight: 300;
     font-size: 16px;
@@ -43,7 +30,7 @@ p {
 
 /* Links */
 a {
-    color: #3bc492;
+    color: $primary-color;
     word-wrap: break-word;
 
     -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -55,7 +42,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #c0392b;
+    color: $contrast-color;
     text-decoration: none;
     outline: 0;
 }
@@ -68,7 +55,9 @@ a:after {
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
-
+#footerwrap a {
+    color: $neutral-color;
+}
  hr {
     display: block;
     height: 1px;
@@ -79,7 +68,7 @@ a:after {
 }
 
 .modal-header {
-	background-color: #64758F;
+	background-color: $contrast-color;
 	color: white;
 }
 
@@ -223,9 +212,13 @@ a.symbol:before {
 	text-align: left;
 }
 
+
 #footerwrap h3 {
 	font-size: 28px;
 	color: white;
+}
+#footerwrap h4 {
+    color: white;
 }
 
 #footerwrap p {
@@ -248,7 +241,7 @@ a.symbol:before {
 }
 .about h5 {
 	font-size: 14px;
-	color: #bebdbd;
+	color: $contrast-color;
 	font-weight: 700;
 }
 
@@ -291,7 +284,7 @@ a.symbol:before {
 	left: 0;
 	padding: 20px;
 	color: #fff;
-	background: #64758F;
+	background: $contrast-color;
 }
 
 .grid figcaption h5 {
@@ -375,7 +368,7 @@ a.symbol:before {
    ========================================================================== */
 
 .accordion-heading {
-	margin-top: : 30px;
+	margin-top: 30px;
 	padding-bottom: 10px;
 	text-align: left;
 	border-bottom: 1px solid #ccc;
@@ -392,7 +385,7 @@ a.symbol:before {
 .accordion-heading plus {
 	font-size: 30px;
 	font-weight: 700;
-	color: #64758F;
+	color: $contrast-color;
 	font-family: 'Raleway', sans-serif;
 	vertical-align: middle;
 }
@@ -414,7 +407,7 @@ a.symbol:before {
 .accordion-heading a:hover {
 	font-family: 'Raleway', sans-serif;
 	font-size: 22px;
-	color: #64758F;
+	color: $contrast-color;
 	text-decoration: none;
 }
 
@@ -429,14 +422,14 @@ a.symbol:before {
 }
 
 .form-group label {
-	font-family: 'Raleway'; sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 }
 
 .btn-theme {
 	color: #fff;
-	background-color: #64758F;
+	background-color: $primary-color;
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-bottom: 10px;
@@ -448,6 +441,6 @@ a.symbol:before {
 .btn-theme:hover {
 	cursor: pointer;
 	color: white;
-	background-color: #16a085;
+	background-color: $contrast-color;
 	
 }

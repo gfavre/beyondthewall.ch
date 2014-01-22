@@ -20,7 +20,7 @@
 .gn-menu-main ul {
 		margin: 0;
 		padding: 0;
-		background: #2D3441;
+		background: $primary-color;
 		color: #ffffff;
 		list-style: none;
 		text-transform: none;
@@ -50,7 +50,7 @@
 .no-touch .gn-menu-main a:hover,
 .no-touch .gn-menu li.gn-search-item:hover,
 .no-touch .gn-menu li.gn-search-item:hover a {
-		background: #64758f;
+		background: $contrast-color;
 		color: white;
 }
 
@@ -58,7 +58,7 @@
 		display: block;
 		float: left;
 		height: 100%;
-		border-right: 1px solid #64758f;
+		border-right: 1px solid $contrast-color;
 		text-align: center;
 }
 
@@ -78,7 +78,7 @@
 .gn-menu-main > li:last-child {
 		float: right;
 		border-right: none;
-		border-left: 1px solid #64758f;
+		border-left: 1px solid $contrast-color;
 }
 
 .gn-menu-main > li > a {
@@ -101,8 +101,8 @@
 		left: 0;
 		overflow: hidden;
 		width: 60px;
-		border-top: 1px solid #64758f;
-		background: #2D3441;
+		border-top: 1px solid $contrast-color;
+		background: $primary-color;
 		-webkit-transform: translateX(-60px);
 		-moz-transform: translateX(-60px);
 		transform: translateX(-60px);
@@ -119,14 +119,14 @@
 }
 
 .gn-menu {
-		border-bottom: 1px solid #64758f;
+		border-bottom: 1px solid $contrast-color;
 		text-align: left;
 		font-size: 18px;
 }
 
 .gn-menu li:not(:first-child),
 .gn-menu li li {
-		box-shadow: inset 0 1px #64758f
+		box-shadow: inset 0 1px $contrast-color
 }
 
 .gn-submenu li {
@@ -138,7 +138,7 @@
 }
 
 .gn-submenu li a {
-		color: #64758f
+		color: $contrast-color
 }
 
 input.gn-search {
@@ -343,19 +343,19 @@ input.gn-search:focus {
 		width: 30px;
 		height: 3px;
 		background: white;
-		box-shadow: 0 3px #2D3441, 0 -6px white, 0 -9px #2D3441, 0 -12px white;
+		box-shadow: 0 3px $primary-color, 0 -6px white, 0 -9px $primary-color, 0 -12px white;
 		content: '';
 }
 
 .no-touch .gn-icon-menu:hover::before,
 .no-touch .gn-icon-menu.gn-selected:hover::before {
 		background: white;
-		box-shadow: 0 3px #64758f, 0 -6px white, 0 -9px #2D3441, 0 -12px white;
+		box-shadow: 0 3px $contrast-color, 0 -6px white, 0 -9px $primary-color, 0 -12px white;
 }
 
 .gn-icon-menu.gn-selected::before {
 		background: white;
-		box-shadow: 0 3px #2D3441, 0 -6px white, 0 -9px #2D3441, 0 -12px white;
+		box-shadow: 0 3px $primary-color, 0 -6px white, 0 -9px $primary-color, 0 -12px white;
 }
 
 /* styles for opening menu */
@@ -387,3 +387,17 @@ input.gn-search:focus {
 			width: 130%
 	}
 }
+
+		label.valid {
+		  width: 24px;
+		  height: 24px;
+		  background: url(assets/img/valid.png) center center no-repeat;
+		  display: inline-block;
+		  text-indent: -9999px;
+		}
+		label.error {
+			font-weight: bold;
+			color: red;
+			padding: 2px 8px;
+			margin-top: 2px;
+		}

@@ -56,6 +56,9 @@ class _WebFactionXmlRPC():
     def login(self, user, password):
         return self.server.login(user, password)
     
+    def __repr__(self):
+        return 'Webfaction API client'
+    
     def __getattr__(self, name):
         def _missing(*args, **kwargs):
             return getattr(self.server, name)(self.session_id, *args, **kwargs)
@@ -104,7 +107,7 @@ env.media_app_name    = env.project + '_media'
 env.media_root        = os.path.join(env.home, 'webapps', env.media_app_name)
 
 env.static_root       = os.path.join(env.home, 'webapps', env.static_app_name)
-env.allowed_hosts     = [__concat_domain(subdomain, env.domain) for subdomain in env.subdomains] + ['sportfac.gregoryfavre.ch']
+env.allowed_hosts     = [__concat_domain(subdomain, env.domain) for subdomain in env.subdomains]
 env.allowed_hosts_str = ';'.join(env.allowed_hosts)
 
 def bootstrap():
@@ -136,7 +139,7 @@ def _create_static_app():
     env.webfaction.create_app(env.project + '_static', 'static_only', False, '')    
 
 def _create_media_app():
-    print("Creating static app...")
+    print("Creating static app for user uploaded content...")
     for app_info in env.webfaction.list_apps():
         if app_info['name'] == env.media_app_name:
             return
@@ -176,10 +179,10 @@ def _create_website():
     env.ip = None
     for machine in machines:
         if machine.get('machine') == env.machine:
-            ip = machine.get('ip')
+            env.ip = machine.get('ip')
 
 
-    website_fct(env.website_name, ip, env.https,
+    website_fct(env.website_name, env.ip, env.https,
                 env.allowed_hosts,
                 (env.django_app_name, '/'), 
                 (env.static_app_name, '/static'),
@@ -244,7 +247,7 @@ def reload_app(arg=None):
 def reload_supervisor():
     "Reload supervisor config"
     with cd(env.supervisor_dir):
-        _ve_run('supervisor','supervisorctl reread && supervisorctl reload')
+        _ve_run('supervisor','supervisorctl reread && supervisorctl update')
 
 def restart_app():
     "Restarts the app using supervisorctl"
