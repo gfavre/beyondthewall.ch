@@ -5,7 +5,7 @@ We deploy the project to a webfaction host using fabric.
 
 Webfaction config
 -----------------
-A webapp called ``supervisor`` containing a working release of `supervisord <http://www.supervisord.org>` has to be installed prior to deploying your project. 
+A webapp called ``supervisor`` containing a working release of `supervisord <http://www.supervisord.org>`_ has to be installed prior to deploying your project. 
 
 Virtualenv and virtualenvwrapper have to be installed on the webfaction host.
 
