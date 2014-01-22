@@ -5,7 +5,9 @@ We deploy the project to a webfaction host using fabric.
 
 Webfaction config
 -----------------
-A webapp called supervisor containing a working release of `supervisord <http://www.supervisord.org>` should be installed.
+A webapp called ``supervisor`` containing a working release of `supervisord <http://www.supervisord.org>` has to be installed prior to deploying your project. 
+
+Virtualenv and virtualenvwrapper have to be installed on the webfaction host.
 
 Configuration File
 ------------------
@@ -25,17 +27,63 @@ A file named :file:`fabsettings.py` has to be created. It is used by the :progra
   
   The git repository used to clone project.
 
-USER            = "grfavre"
-PASSWORD        = "******"
-DBNAME          = "beyondthewall"
-DBUSER          = "beyondthewall"
-DBPASSWORD      = ""
-SETTINGS_SUBDIR = "beyondthewall"
-VIRTUALENVS     = "/home/grfavre/.virtualenvs"
-MAILHOST        = "smtp.webfaction.com"
-MAILUSER        = "grfavre"
-MAILPASSWORD    = PASSWORD
-MAILADDRESS     = "info@beyondthewall.ch"
-DOMAIN          = 'beyondthewall.ch'
-SUBDOMAINS      = ['', 'www']
+``USER`` 
+  
+  Webfaction username (to log in and to create webapps.
+
+``PASSWORD``  
+
+  Webfaction password for user ``USER``
+
+``DBNAME``  
+  
+  Name of the database that will be created (postgres)
+  
+``DBUSER``  
+  
+  Database user that will be created to establish the connection to the database.
+
+``DBPASSWORD``  
+  
+  Password used by ``DBUSER`` to connect to ``DBNAME`` database.
+
+``SETTINGS_SUBDIR``
+
+  Where to find the django settings inside your ``PROJECT_NAME``
+
+``VIRTUALENVS``  
+  
+  Path to your virtualenvs
+
+``MAILHOST``  
+  
+  Server to be used to send mail.
+  
+  *Default*: ``smtp.webfaction.com``
+
+``MAILUSER``
+
+  User that will connect to the mail server. 
+  
+  *Default*: ``USER``
+
+``MAILPASSWORD``
+
+  Password used by ``MAILUSER`` to connect to ``MAILHOST``
+  
+  *Default*: ``PASSWORD``
+
+``MAILADDRESS``
+
+  Outgoing mail address
+
+``DOMAIN``
+
+  Domain that will host the project (e.g. yourdomain.com)
+
+``SUBDOMAINS``
+
+  Subdomains that will host the project.
+  
+  *Default*: ``['', 'www']``
 
