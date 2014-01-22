@@ -392,7 +392,7 @@
           <h3>Adresse</h3>
           <p>
             <h4 itemprop="name">Beyond the Wall SàRL</h4>
-            <span itemprop="founder" itemscope itemtype="http://schema.org/Person">Gregory Favre</span><br/>
+            <span itemprop="founder" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Gregory Favre</span></span><br/>
             <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               <span itemprop="streetAddress">Rue de Riant-Coteau 134</span><br/>
               <abbr itemprop="addressCountry" title="Switzerland">CH</abbr>-<span itemprop="postalCode">1196</span> <span itemprop="addressLocality">Gland</span><br/>
@@ -401,7 +401,7 @@
           </p>
           <h3>Vie numérique</h3>
           <p>
-             <a href="mailto:info@beyondthewall.ch"><span class='symbol'>circleemail</span> email</a><br />
+             <a href="mailto:info@beyondthewall.ch" itemprop="email"><span class='symbol'>circleemail</span> email</a><br />
              <a href="http://www.twitter.com/FavreGregory"><span class='symbol'>circletwitterbird</span> Twitter</a><br />
              <a href="https://www.linkedin.com/in/gregoryfavre"><span class='symbol'>circlelinkedin</span> LinkedIn</a><br />
              <a href="https://github.com/gfavre"><span class='symbol'>circlegithub</span> GitHub</a>
@@ -425,7 +425,7 @@
 				  	<textarea class="form-control" name="body" rows="3" id="message" required></textarea>
 				  </div>
 				  <br>
-				  <input type="submit" class="btn-large btn-theme"></input>
+				  <button type="submit" class="btn-large btn-theme">Envoyer ce message</button>
 				</form>
 			</div>
 		

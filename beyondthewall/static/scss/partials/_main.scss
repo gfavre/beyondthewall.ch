@@ -219,6 +219,7 @@ a.symbol:before {
 }
 #footerwrap h4 {
     color: white;
+    
 }
 
 #footerwrap p {
@@ -429,18 +430,19 @@ a.symbol:before {
 
 .btn-theme {
 	color: #fff;
-	background-color: $primary-color;
+	background-color: $contrast-color;
 	padding-left: 40px;
 	padding-right: 40px;
 	padding-bottom: 10px;
 	padding-top: 10px;
 	font-weight: 700;
 	border-radius: 3px;
+	border-color: transparent;
 }
 
 .btn-theme:hover {
 	cursor: pointer;
 	color: white;
-	background-color: $contrast-color;
-	
+	background-color: darken( $contrast-color, 10% ) ;
+	border-color: transparent;
 }
