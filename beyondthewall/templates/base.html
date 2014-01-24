@@ -38,8 +38,8 @@
 				<nav class="gn-menu-wrapper">
 					<div class="gn-scroller">
 						<ul class="gn-menu">
-							<li><a href="#home" class="gn-icon gn-icon-home smoothScroll">Home</a></li>
-							<li><a href="#about" class="gn-icon gn-icon-archive smoothScroll">About</a></li>
+							<li><a href="#home" class="gn-icon gn-icon-home smoothScroll">Accueil</a></li>
+							<li><a href="#about" class="gn-icon gn-icon-archive smoothScroll">À propos</a></li>
 							<li><a href="#portfolio" class="gn-icon gn-icon-pictures smoothScroll">Portfolio</a></li>
 							<li><a href="#blog" class="gn-icon gn-icon-article smoothScroll">Blog</a></li>
 							<li><a href="#contact" id="contact-link" class="gn-icon gn-icon-envelop smoothScroll">Contact</a></li>
@@ -73,7 +73,7 @@
 			<br>
 			<h4>Ingénieur passionné par les technologies de l'information, je développe des sites et des applications web depuis plus de 15 ans.</h4>
 			<p>Durant les dernières années, j’ai réalisé de nombreuses solutions, d’une part pour mes employeurs, le CERN, puis l’EPFL -, mais également en mandat pour des PME, des associations et des particuliers. J'aime partager mes connaissances, que ce soit avec mes collègues et partenaires ou devant une classe. J'aime découvrir de nouveaux horizons, comprendre les besoins et métiers de mes clients.</p>
-							  <p>Vous êtes experts dans votre domaine, mais certains tracas administratifs ou techniques vous font perdre du temps et de l’énergie. Je peux vous aider, en développant avec vous une solution sur mesure, vous laissant ainsi le temps de vous focaliser sur ce qui compte le plus: votre métier.</p>
+							  <p>Vous êtes expert dans votre domaine, mais certains tracas administratifs ou techniques vous font perdre du temps et de l’énergie. Je peux vous aider, en développant avec vous une solution sur mesure, vous laissant ainsi le temps de vous focaliser sur ce qui compte le plus: votre métier.</p>
 							  <p>Je m'intéresse à tous les aspects de votre projet, définissant avec vous le périmètre et les fonctionnalités souhaitées, je vous accompagne également dans les questions d'architecture de l'information et d'expérience utilisateur.</p>
 		</div><!-- /col-lg-6 -->
 	</div><!-- /container -->
@@ -155,7 +155,7 @@
 	<section id="portfolio" name="portfolio"></section>
 	<div id="foliowrap">
 		<div class="container">
-			<h3>I Create Cool Stuff</h3>
+			<h3>Quelques projets</h3>
 			<br>
 			<br>
 			<div class="row">	
@@ -164,10 +164,10 @@
 				<div class="col-md-4 ">
 			    	<div class="grid mask">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/folio01.jpg' %}" alt="">
+							<img class="img-responsive" src="{% static 'img/portfolio/kepchup.png' %}" alt="">
 							<figcaption>
-								<h5>DASHBOARD</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+								<h5>Kepchup</h5>
+								<a data-toggle="modal" href="#modal-kepchup" class="btn btn-primary btn-lg">En savoir plus…</a>
 							</figcaption><!-- /figcaption -->
 						</figure><!-- /figure -->
 			    	</div><!-- /grid-mask -->
@@ -178,20 +178,20 @@
 						 <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
 						      a modal for each of your projects. -->
 						      
-						  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						  <div class="modal fade" id="modal-kepchup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 						    <div class="modal-dialog">
 						      <div class="modal-content">
 						        <div class="modal-header">
 						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						          <h4 class="modal-title">Project Title</h4>
+						          <h4 class="modal-title">Sport scolaire facultatif</h4>
 						        </div>
 						        <div class="modal-body">
-						          <p><img class="img-responsive" src="{% static 'img/portfolio/folio01.jpg' %}" alt=""></p>
-						          <p>This project was crafted for Some Name corp. Detail here a little about your job requirements and the tools used. Tell about the challenges faced and what you and your team did to solve it.</p>
-						          <p><b><a href="#">Visit Site</a></b></p>
+						          <p><img class="img-responsive" src="{% static 'img/portfolio/kepchup.png' %}" alt="Capture du site kepchup.ch"></p>
+						          <p>Le groupement scolaire de Coppet avait besoin d'un moyen simple pour gérer les inscriptions au sport scolaire facultatif. Ce site a été utilisé par plus de 450 familles. <br />Technologies: Django, AngularJS, Bootstrap.</p>
+						          <p><b>Site: <a href="http://www.kepchup.ch">Sport scolaire facultatif du groupement scolaire de Coppet.</a></b></p>
 						        </div>
 						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
 						        </div>
 						      </div><!-- /.modal-content -->
 						    </div><!-- /.modal-dialog -->
@@ -202,24 +202,43 @@
 				<div class="col-md-4">
 			    	<div class="grid mask">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/folio02.jpg' %}" alt="">
+							<img class="img-responsive" src="{% static 'img/portfolio/vioget.png' %}" alt="">
 							<figcaption>
-								<h5>UI DESIGN</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+								<h5>Vioget Pêche</h5>
+								<a data-toggle="modal" href="#modal-vioget" class="btn btn-primary btn-lg">En savoir plus…</a>
 							</figcaption><!-- /figcaption -->
 						</figure><!-- /figure -->
 			    	</div><!-- /grid-mask -->
 			    	<br>
 				</div><!-- /col -->
 				
+				<div class="modal fade" id="modal-vioget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						    <div class="modal-dialog">
+						      <div class="modal-content">
+						        <div class="modal-header">
+						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						          <h4 class="modal-title">Vioget Pêche</h4>
+						        </div>
+						        <div class="modal-body">
+						          <p><img class="img-responsive" src="{% static 'img/portfolio/vioget.png' %}" alt="Capture du site vioget-peche.ch"></p>
+						          <p>Eric Vioget possède une boutique d'articles de pêche. Il m'a contacté parce qu'il n'arrivait plus à utiliser sa boutique en ligne. J'ai récupéré sa base de plusieurs milliers d'articles et l'ai transférée vers un nouveau site, utilisant un outil plus moderne et pratique (de pgshop pro à prestashop, qui est un standard actuel du marché).<br />Technologies: Prestashop, MySQL et Selenium.</p>
+						          <p><b>Site: <a href="http://www.vioget-peche.ch">Vioget Pêche</a></b></p>
+						        </div>
+						        <div class="modal-footer">
+						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+						        </div>
+						      </div><!-- /.modal-content -->
+						    </div><!-- /.modal-dialog -->
+						  </div><!-- /.modal -->
+				
 				<!-- PORTFOLIO IMAGE 3 -->
 				<div class="col-md-4">
 			    	<div class="grid mask">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/folio03.jpg' %}" alt="">
+							<img class="img-responsive" src="{% static 'img/portfolio/cosadoca.png' %}" alt="">
 							<figcaption>
-								<h5>ANDROID PAGE</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+								<h5>Cosadoca</h5>
+								<a data-toggle="modal" href="#modal-cosadoca" class="btn btn-primary btn-lg">En savoir plus…</a>
 							</figcaption><!-- /figcaption -->
 						</figure><!-- /figure -->
 			    	</div><!-- /grid-mask -->
@@ -227,43 +246,106 @@
 				</div><!-- /col -->
 			</div><!-- /row -->
 
+<div class="modal fade" id="modal-cosadoca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						    <div class="modal-dialog">
+						      <div class="modal-content">
+						        <div class="modal-header">
+						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						          <h4 class="modal-title">Cosadoca</h4>
+						        </div>
+						        <div class="modal-body">
+						          <p><img class="img-responsive" src="{% static 'img/portfolio/cosadoca.png' %}" alt="Capture du site cosadoca.ch"></p>
+						          <p>Le <em>consortium pour le sauvetage documentaire en cas de catastrophe</em> devait refaire un site vieillissant qu'il était impossible de mettre à jour. Le nouveau site est relié aux systèmes d'informations de l'université de Lausanne et de l'EPFL et offre une édition simple, une gestion du fonds de photos et de ressources documentaires.<br />Technologies: Django-cms, haystack.</p>
+						          <p><b>Site: <a href="http://www.cosadoca.ch">Cosadoca</a></b></p>
+						        </div>
+						        <div class="modal-footer">
+						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+						        </div>
+						      </div><!-- /.modal-content -->
+						    </div><!-- /.modal-dialog -->
+						  </div><!-- /.modal -->
+
+
 				<!-- PORTFOLIO IMAGE 4 -->
 			<div class="row">	
 				<div class="col-md-4 ">
 			    	<div class="grid mask">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/folio04.jpg' %}" alt="">
+							<img class="img-responsive" src="{% static 'img/portfolio/phytotm.ch.png' %}" alt="">
 							<figcaption>
-								<h5>PROFILE</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+								<h5>Phyto t'm</h5>
+								<a data-toggle="modal" href="#modal-phytotm" class="btn btn-primary btn-lg">En savoir plus…</a>
 							</figcaption><!-- /figcaption -->
 						</figure><!-- /figure -->
 			    	</div><!-- /grid-mask -->
 			    	<br>
 				</div><!-- /col -->
-				
+
+
+                        <div class="modal fade" id="modal-phytotm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						    <div class="modal-dialog">
+						      <div class="modal-content">
+						        <div class="modal-header">
+						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						          <h4 class="modal-title">Phyto t'm</h4>
+						        </div>
+						        <div class="modal-body">
+						          <p><img class="img-responsive" src="{% static 'img/portfolio/phytotm.ch.png' %}" alt="Capture du site phytotm.ch"></p>
+						          <p>Phyto t'm est un cabinet de naturopathie situé à Nyon.<br />Technologies: Django-cms, Bootstrap, SASS.</p>
+						          <p><b>Site: <a href="http://www.phytotm.ch">Phyto t'm</a></b></p>
+						        </div>
+						        <div class="modal-footer">
+						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+						        </div>
+						      </div><!-- /.modal-content -->
+						    </div><!-- /.modal-dialog -->
+						  </div><!-- /.modal -->
+
+
 				<!-- PORTFOLIO IMAGE 5 -->
 				<div class="col-md-4">
 			    	<div class="grid mask">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/folio05.jpg' %}" alt="">
+							<img class="img-responsive" src="{% static 'img/portfolio/sdis-gland.ch.png' %}" alt="">
 							<figcaption>
-								<h5>TWITTER STATUS</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+								<h5>SDIS Gland région</h5>
+								<a data-toggle="modal" href="#modal-sdis" class="btn btn-primary btn-lg">En savoir plus…</a>
 							</figcaption><!-- /figcaption -->
 						</figure><!-- /figure -->
 			    	</div><!-- /grid-mask -->
 			    	<br>
 				</div><!-- /col -->
-				
+
+                        <div class="modal fade" id="modal-sdis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						    <div class="modal-dialog">
+						      <div class="modal-content">
+						        <div class="modal-header">
+						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						          <h4 class="modal-title">SDIS Gland Région</h4>
+						        </div>
+						        <div class="modal-body">
+						          <p><img class="img-responsive" src="{% static 'img/portfolio/sdis-gland.ch.png' %}" alt="Capture du site sdisglandregion.ch"></p>
+						          <p>Le Service de Défense Incendie et de Secours de Gland-région gère ses données d'interventions et d'effectifs via une application métier appelée ECADIS. Les pompiers souhaitaient que l'effectif, ainsi que les calendriers de chacun soient accessibles via le site web dans une zone protégée. J'ai créé une passerelle entre les deux logiciels, de sorte que le site soit toujours à jour.<br />Technologies: Joomla.
+    						          
+						          </p>
+						          <p><b>Site: <a href="http://www.sdisglandregion.ch">SDIS Gland Région</a></b></p>
+						        </div>
+						        <div class="modal-footer">
+						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+						        </div>
+						      </div><!-- /.modal-content -->
+						    </div><!-- /.modal-dialog -->
+						  </div><!-- /.modal -->
+
+
 				<!-- PORTFOLIO IMAGE 6 -->
 				<div class="col-md-4">
 			    	<div class="grid mask">
 						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/folio06.jpg' %}" alt="">
+							<img class="img-responsive" src="{% static 'img/portfolio/nonoetgreg.png' %}" alt="">
 							<figcaption>
-								<h5>PHONE MOCKUP</h5>
-								<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+								<h5>Mariage</h5>
+								<a data-toggle="modal" href="#modal-nonoetgreg" class="btn btn-primary btn-lg">En savoir plus…</a>
 							</figcaption><!-- /figcaption -->
 						</figure><!-- /figure -->
 			    	</div><!-- /grid-mask -->
@@ -272,7 +354,28 @@
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /foliowrap -->
-	
+
+ <div class="modal fade" id="modal-nonoetgreg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						    <div class="modal-dialog">
+						      <div class="modal-content">
+						        <div class="modal-header">
+						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						          <h4 class="modal-title">Mariage de Noémie et Greg</h4>
+						        </div>
+						        <div class="modal-body">
+						          <p><img class="img-responsive" src="{% static 'img/portfolio/nonoetgreg.png' %}" alt="Capture du site nonoetgreg.ch"></p>
+						          <p>Parce qu'un mariage est un projet en soi, celui d'un informaticien se doit d'être un peu technologique... Gestion des inscriptions, des milliers de photos, etc.<br />Technologies: Django, django-cms, Bootstrap.
+    						          
+						          </p>
+						          <p><b>Site: <a href="http://www.nonoetgreg.ch">Mariage de Noémie et Greg</a></b></p>
+						        </div>
+						        <div class="modal-footer">
+						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+						        </div>
+						      </div><!-- /.modal-content -->
+						    </div><!-- /.modal-dialog -->
+						  </div><!-- /.modal -->
+
 <!--	
 	<section id="blog" name="blog"></section>
 	<div class="container">
