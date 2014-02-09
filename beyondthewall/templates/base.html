@@ -1,4 +1,6 @@
 {% load staticfiles %}
+{% load sekizai_tags %}
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -16,10 +18,12 @@
 
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/jquery.validate.min.js' %}"></script>
-	<script src="{% static 'js/Chart.js' %}"></script>
-	<script src="{% static 'js/modernizr.custom.js' %}"></script>
-	
-	
+
+
+    <script src="{% static 'js/Chart.js' %}"></script>
+    <script src="{% static 'js/modernizr.custom.js' %}"></script>
+    
+    
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -30,467 +34,63 @@
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#gn-menu">
-  	<!-- ========== MAIN MENU ========== -->
-	<div class="container">
-		<ul id="gn-menu" class="gn-menu-main">
-			<li class="gn-trigger">
-				<a class="gn-icon gn-icon-menu"><span class="icon-menu"></span><span class="hidden">Menu</span></a>
-				<nav class="gn-menu-wrapper">
-					<div class="gn-scroller">
-						<ul class="gn-menu">
-							<li><a href="#home" class="gn-icon smoothScroll"><span class="icon-home"></span> Accueil</a></li>
-							<li><a href="#about" class="gn-icon smoothScroll"><span class="icon-profile"></span> À propos</a></li>
-							<li><a href="#portfolio" class="gn-icon smoothScroll"><span class="icon-image"></span> Réalisations</a></li>
-							<li><a href="#blog" class="gn-icon smoothScroll"><span class="icon-newspaper"></span> Blog</a></li>
-							<li><a href="#contact" id="contact-link" class="gn-icon  smoothScroll"> <span class="icon-mail2"></span> Contact</a></li>
-						</ul>
-					</div><!-- /gn-scroller -->
-				</nav>
-			</li>
-			<li><a href="#home" class="smoothScroll">Beyond the Wall</a></li>
-		</ul>
-	</div><!-- /container -->
+      <!-- ========== MAIN MENU ========== -->
+    <div class="container">
+        <ul id="gn-menu" class="gn-menu-main">
+            <li class="gn-trigger">
+                <a class="gn-icon gn-icon-menu"><span class="icon-menu"></span><span class="hidden">Menu</span></a>
+                <nav class="gn-menu-wrapper">
+                    <div class="gn-scroller">
+                        <ul class="gn-menu">
+                            <li><a href="#home" class="gn-icon smoothScroll"><span class="icon-home"></span> Accueil</a></li>
+                            <li><a href="#about" class="gn-icon smoothScroll"><span class="icon-profile"></span> À propos</a></li>
+                            <li><a href="#portfolio" class="gn-icon smoothScroll"><span class="icon-image"></span> Réalisations</a></li>
+                            <li><a href="#blog" class="gn-icon smoothScroll"><span class="icon-newspaper"></span> Blog</a></li>
+                            <li><a href="#contact" id="contact-link" class="gn-icon  smoothScroll"> <span class="icon-mail2"></span> Contact</a></li>
+                        </ul>
+                    </div><!-- /gn-scroller -->
+                </nav>
+            </li>
+            <li><a href="#home" class="smoothScroll">Beyond the Wall</a></li>
+        </ul>
+    </div><!-- /container -->
 
-	<!-- ========== HEADER SECTION ========== -->
-	<section id="home" name="home"></section>
-	<div id="headerwrap">
-		<div class="container">
-			<div class="col-lg-8">
-			<h1>Je crée des solutions informatiques sur mesure.</h1>
-			</div>
-			<div class="col-lg-4">
-			</div>
-		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-
-	<!-- ABOUT SECTION -->
-	<section id="about" name="about"></section>
-	<div class="container about">
-		<div class="col-lg-6 col-lg-offset-3">
-			<h3>À propos de Beyond the Wall</h3>
-			<h5>Gregory Favre, ingénieur en informatique, geek.</h5>
-			<hr>
-			<br>
-			<h4>Ingénieur passionné par les technologies de l'information, je développe des sites et des applications web depuis plus de 15 ans.</h4>
-			<p>Durant les dernières années, j’ai réalisé de nombreuses solutions, d’une part pour mes employeurs, le CERN, puis l’EPFL, mais également en mandat pour des PME, des associations et des particuliers. J'aime partager mes connaissances, que ce soit avec mes collègues et partenaires ou devant une classe. J'aime découvrir de nouveaux horizons, comprendre les besoins et métiers de mes clients.</p>
-							  <p>Vous êtes expert dans votre domaine, mais certains tracas administratifs ou techniques vous font perdre du temps et de l’énergie. Je peux vous aider, en développant avec vous une solution sur mesure, vous laissant ainsi le temps de vous focaliser sur ce qui compte le plus: votre métier.</p>
-							  <p>Je m'intéresse à tous les aspects de votre projet, définissant avec vous le périmètre et les fonctionnalités souhaitées, je vous accompagne également dans les questions d'architecture de l'information et d'expérience utilisateur.</p>
-							  <a href="{% static 'resume-Gregory-Favre.pdf' %}" class="btn btn-outline-inverse btn-lg"><span class="icon-file-pdf"></span> CV complet</a>
-		</div><!-- /col-lg-6 -->
-	</div><!-- /container -->
-
-	<!-- BEGIN CHART SECTION 	
-	<div id="chartwrap">
-	<br>
-	<br>
-		<div class="container centered">
-			<div class="col-lg-3"></div>
-			
-				<div class="col-lg-2">
-					<canvas id="canvas" height="130" width="130"></canvas>
-					<label>Javascript</label>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 70,
-									color:"#2d3441"
-								},
-								{
-									value : 30,
-									color : "#64758f"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
-					</script>
-					<br>
-					<br>
-				</div>
-				
-				
-				<div class="col-lg-2">
-					<canvas id="canvas1" height="130" width="130"></canvas>
-					<label>Photoshop</label>
-					<br>
-					<script>
-						var doughnutData = [
-								{
-									value: 90,
-									color:"#2d3441"
-								},
-								{
-									value : 10,
-									color : "#64758f"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("canvas1").getContext("2d")).Doughnut(doughnutData);
-					</script>
-					<br>
-					<br>
-				</div>
-				
-				<div class="col-lg-2">
-					<canvas id="canvas2" height="130" width="130"></canvas>
-					<label>Bootstrap</label>
-					<script>
-						var doughnutData = [
-								{
-									value: 60,
-									color:"#1abc9c"
-								},
-								{
-									value : 40,
-									color : "#ecf0f1"
-								}
-							];
-							var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
-					</script>
-					<br>
-					<br>
-				</div>
-
-			<div class="col-lg-3"></div>
-		</div>
-	</div>
-	-->
-	<section id="portfolio" name="portfolio"></section>
-	<div id="foliowrap">
-		<div class="container">
-			<h3>Quelques projets</h3>
-			<br>
-			<br>
-			<div class="row">	
-			
-				<!-- PORTFOLIO IMAGE 1 -->
-				<div class="col-md-4 ">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/kepchup.png' %}" alt="">
-							<figcaption>
-								<h5>Kepchup</h5>
-								<a data-toggle="modal" href="#modal-kepchup" class="btn btn-primary btn-lg">En savoir plus…</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-			    	<br>
-				</div><!-- /col -->
-				
-				
-						 <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
-						      a modal for each of your projects. -->
-						      
-						  <div class="modal fade" id="modal-kepchup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						    <div class="modal-dialog">
-						      <div class="modal-content">
-						        <div class="modal-header">
-						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						          <h4 class="modal-title">Sport scolaire facultatif</h4>
-						        </div>
-						        <div class="modal-body">
-						          <p><img class="img-responsive" src="{% static 'img/portfolio/kepchup.png' %}" alt="Capture du site kepchup.ch"></p>
-						          <p>Le groupement scolaire de Coppet avait besoin d'un moyen simple pour gérer les inscriptions au sport scolaire facultatif. Ce site a été utilisé par plus de 450 familles. <br />Technologies: Django, AngularJS, Bootstrap.</p>
-						          <p><b>Site: <a href="http://www.kepchup.ch">Sport scolaire facultatif du groupement scolaire de Coppet.</a></b></p>
-						        </div>
-						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-						        </div>
-						      </div><!-- /.modal-content -->
-						    </div><!-- /.modal-dialog -->
-						  </div><!-- /.modal -->
-				
-				
-				<!-- PORTFOLIO IMAGE 2 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/vioget.png' %}" alt="">
-							<figcaption>
-								<h5>Vioget Pêche</h5>
-								<a data-toggle="modal" href="#modal-vioget" class="btn btn-primary btn-lg">En savoir plus…</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-			    	<br>
-				</div><!-- /col -->
-				
-				<div class="modal fade" id="modal-vioget" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						    <div class="modal-dialog">
-						      <div class="modal-content">
-						        <div class="modal-header">
-						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						          <h4 class="modal-title">Vioget Pêche</h4>
-						        </div>
-						        <div class="modal-body">
-						          <p><img class="img-responsive" src="{% static 'img/portfolio/vioget.png' %}" alt="Capture du site vioget-peche.ch"></p>
-						          <p>Eric Vioget possède une boutique d'articles de pêche. Il m'a contacté parce qu'il n'arrivait plus à utiliser sa boutique en ligne. J'ai récupéré sa base de plusieurs milliers d'articles et l'ai transférée vers un nouveau site, utilisant un outil plus moderne et pratique (de pgshop pro à prestashop, qui est un standard actuel du marché).<br />Technologies: Prestashop, MySQL et Selenium.</p>
-						          <p><b>Site: <a href="http://www.vioget-peche.ch">Vioget Pêche</a></b></p>
-						        </div>
-						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-						        </div>
-						      </div><!-- /.modal-content -->
-						    </div><!-- /.modal-dialog -->
-						  </div><!-- /.modal -->
-				
-				<!-- PORTFOLIO IMAGE 3 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/cosadoca.png' %}" alt="">
-							<figcaption>
-								<h5>Cosadoca</h5>
-								<a data-toggle="modal" href="#modal-cosadoca" class="btn btn-primary btn-lg">En savoir plus…</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-			    	<br>
-				</div><!-- /col -->
-			</div><!-- /row -->
-
-<div class="modal fade" id="modal-cosadoca" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						    <div class="modal-dialog">
-						      <div class="modal-content">
-						        <div class="modal-header">
-						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						          <h4 class="modal-title">Cosadoca</h4>
-						        </div>
-						        <div class="modal-body">
-						          <p><img class="img-responsive" src="{% static 'img/portfolio/cosadoca.png' %}" alt="Capture du site cosadoca.ch"></p>
-						          <p>Le <em>consortium pour le sauvetage documentaire en cas de catastrophe</em> devait refaire un site vieillissant qu'il était impossible de mettre à jour. Le nouveau site est relié aux systèmes d'informations de l'université de Lausanne et de l'EPFL et offre une édition simple, une gestion du fonds de photos et de ressources documentaires.<br />Technologies: Django-cms, haystack.</p>
-						          <p><b>Site: <a href="http://www.cosadoca.ch">Cosadoca</a></b></p>
-						        </div>
-						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-						        </div>
-						      </div><!-- /.modal-content -->
-						    </div><!-- /.modal-dialog -->
-						  </div><!-- /.modal -->
+    <!-- ========== HEADER SECTION ========== -->
+    <section id="home" name="home"></section>
+    <div id="headerwrap">
+        <div class="container">
+            <div class="col-lg-8">
+            <h1>Je crée des solutions informatiques sur mesure.</h1>
+            </div>
+            <div class="col-lg-4">
+            </div>
+        </div><!-- /container -->
+    </div><!-- /headerwrap -->
 
 
-				<!-- PORTFOLIO IMAGE 4 -->
-			<div class="row">	
-				<div class="col-md-4 ">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/phytotm.ch.png' %}" alt="">
-							<figcaption>
-								<h5>Phyto t'm</h5>
-								<a data-toggle="modal" href="#modal-phytotm" class="btn btn-primary btn-lg">En savoir plus…</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-			    	<br>
-				</div><!-- /col -->
+    <!-- ABOUT SECTION -->
+    <section id="about" name="about"></section>
+    <div class="container about">
+        <div class="col-lg-6 col-lg-offset-3">{% include "about.html" %}</div>
+    </div>
 
+    <div id="testimonial">
+      <div class="container">{% include "definitions.html" %}</div>
+    </div>
 
-                        <div class="modal fade" id="modal-phytotm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						    <div class="modal-dialog">
-						      <div class="modal-content">
-						        <div class="modal-header">
-						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						          <h4 class="modal-title">Phyto t'm</h4>
-						        </div>
-						        <div class="modal-body">
-						          <p><img class="img-responsive" src="{% static 'img/portfolio/phytotm.ch.png' %}" alt="Capture du site phytotm.ch"></p>
-						          <p>Phyto t'm est un cabinet de naturopathie situé à Nyon.<br />Technologies: Django-cms, Bootstrap, SASS.</p>
-						          <p><b>Site: <a href="http://www.phytotm.ch">Phyto t'm</a></b></p>
-						        </div>
-						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-						        </div>
-						      </div><!-- /.modal-content -->
-						    </div><!-- /.modal-dialog -->
-						  </div><!-- /.modal -->
-
-
-				<!-- PORTFOLIO IMAGE 5 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/sdis-gland.ch.png' %}" alt="">
-							<figcaption>
-								<h5>SDIS Gland région</h5>
-								<a data-toggle="modal" href="#modal-sdis" class="btn btn-primary btn-lg">En savoir plus…</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-			    	<br>
-				</div><!-- /col -->
-
-                        <div class="modal fade" id="modal-sdis" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						    <div class="modal-dialog">
-						      <div class="modal-content">
-						        <div class="modal-header">
-						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						          <h4 class="modal-title">SDIS Gland Région</h4>
-						        </div>
-						        <div class="modal-body">
-						          <p><img class="img-responsive" src="{% static 'img/portfolio/sdis-gland.ch.png' %}" alt="Capture du site sdisglandregion.ch"></p>
-						          <p>Le Service de Défense Incendie et de Secours de Gland-région gère ses données d'interventions et d'effectifs via une application métier appelée ECADIS. Les pompiers souhaitaient que l'effectif, ainsi que les calendriers de chacun soient accessibles via le site web dans une zone protégée. J'ai créé une passerelle entre les deux logiciels, de sorte que le site soit toujours à jour.<br />Technologies: Joomla.
-    						          
-						          </p>
-						          <p><b>Site: <a href="http://www.sdisglandregion.ch">SDIS Gland Région</a></b></p>
-						        </div>
-						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-						        </div>
-						      </div><!-- /.modal-content -->
-						    </div><!-- /.modal-dialog -->
-						  </div><!-- /.modal -->
-
-
-				<!-- PORTFOLIO IMAGE 6 -->
-				<div class="col-md-4">
-			    	<div class="grid mask">
-						<figure>
-							<img class="img-responsive" src="{% static 'img/portfolio/nonoetgreg.png' %}" alt="">
-							<figcaption>
-								<h5>Mariage</h5>
-								<a data-toggle="modal" href="#modal-nonoetgreg" class="btn btn-primary btn-lg">En savoir plus…</a>
-							</figcaption><!-- /figcaption -->
-						</figure><!-- /figure -->
-			    	</div><!-- /grid-mask -->
-				</div><!-- /col -->
-				<br>
-			</div><!-- /row -->
-		</div><!-- /container -->
-	</div><!-- /foliowrap -->
-
- <div class="modal fade" id="modal-nonoetgreg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-						    <div class="modal-dialog">
-						      <div class="modal-content">
-						        <div class="modal-header">
-						          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-						          <h4 class="modal-title">Mariage de Noémie et Greg</h4>
-						        </div>
-						        <div class="modal-body">
-						          <p><img class="img-responsive" src="{% static 'img/portfolio/nonoetgreg.png' %}" alt="Capture du site nonoetgreg.ch"></p>
-						          <p>Parce qu'un mariage est un projet en soi, celui d'un informaticien se doit d'être un peu technologique... Gestion des inscriptions, des milliers de photos, etc.<br />Technologies: Django, django-cms, Bootstrap.
-    						          
-						          </p>
-						          <p><b>Site: <a href="http://www.nonoetgreg.ch">Mariage de Noémie et Greg</a></b></p>
-						        </div>
-						        <div class="modal-footer">
-						          <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
-						        </div>
-						      </div><!-- /.modal-content -->
-						    </div><!-- /.modal-dialog -->
-						  </div><!-- /.modal -->
-
-<!--	
-	<section id="blog" name="blog"></section>
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3"></div>
-			<div class="col-lg-6 about">
-				<h3>Sometimes I Blog</h3>
-				<h5>THOUGHTS ABOUT DESIGN</h5>
-				<br>
-				<br>
-				
-		            <div class="accordion" id="accordion2">
-		                <div class="accordion-group">
-		                    <div class="accordion-heading">
-		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-		                        <date>Sep 15, 2013</date> <plus> + </plus> First Class Design
-		                        </a>
-		                    </div>
-		                    <div id="collapseOne" class="accordion-body collapse in">
-		                    	<br>
-		                        <div class="accordion-inner">
-		                        <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </h4>
-		                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-								<p><img class="img-circle" src="{% static 'img/avatar.jpg' %}" height="50px" width="50px"> - <i>Alex Webber.</i></p>
-								</div>
-		                    </div>
-		                </div>
-		                <br>
-		
-		                <div class="accordion-group">
-		                    <div class="accordion-heading">
-		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-		                        <date>Sep 10, 2013</date> <plus> + </plus>  Retina Ready Theme
-		                        </a>
-		                    </div>
-		                    <div id="collapseTwo" class="accordion-body collapse">
-		                        <div class="accordion-inner">
-								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div>
-		                    </div>
-		                </div>
-		                <br>
-		
-		                 <div class="accordion-group">
-		                    <div class="accordion-heading">
-		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-		                        <date>Aug 22, 2013</date> <plus> + </plus>  Awesome Support
-		                        </a>
-		                    </div>
-		                    <div id="collapseThree" class="accordion-body collapse">
-		                        <div class="accordion-inner">
-								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div>
-		                    </div>
-		                </div>
-		                <br>
-		                
-		                 <div class="accordion-group">
-		                    <div class="accordion-heading">
-		                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-		                        <date>Aug 13, 2013</date> <plus> + </plus>  Responsive Design
-		                        </a>
-		                    </div>
-		                    <div id="collapseFour" class="accordion-body collapse">
-		                        <div class="accordion-inner">
-								<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-								</div>
-		                    </div>
-		                </div>
-		                <br>			
-					</div>
-				</div>
-
-			<div class="col-lg-3"></div>
-		</div>
-	</div>-->
-	
-	<div id="testimonial">
-		<div class="container">
-			<div class="bs-example">
-				<div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
-					<ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					</ol>
-				<div class="carousel-inner">
-					<div class="item active">
-						<h1>Work with Alex was a pleasure. He understood exactly what I wanted and created an awesome site for my company.</h1>
-						<br>
-						<h2>Brad Cooper</h2>
-					</div>
-					<div class="item">
-						<h1>I'm really happy with the results. Get 100% satisfaction is difficult but Alex got it without problems.</h1>
-						<br>
-						<h2>Joan Mathews</h2>
-					</div>
-					<div class="item">
-						<h1>Search no more. Alex is the guy that you need for your next project. Don't waste your time. He's the chosen one.</h1>
-						<br>
-						<h2>Trevor Bishop</h2>
-					</div>
-				</div>
-			<br>
-			<br>
-			<br>
-			</div>
-		</div>
-	</div>
-	
-	<section id="contact" name="contact"></section>
-	<div id="footerwrap">
+    
+    <div id="skills-map">                      
+      <div class="container">{% include "map.html" %}</div>
+    </div>
+    
+    <section id="portfolio" name="portfolio"></section>
+    <div id="foliowrap">
+      <div class="container">{% include "projects.html" %}</div>
+    </div>
+    
+    
+    <section id="contact" name="contact"></section>
+    <div id="footerwrap">
       <div class="container">
         <div class="col-lg-5" itemscope itemtype="http://schema.org/LocalBusiness">
           <h3>Adresse</h3>
@@ -510,92 +110,95 @@
              <a href="https://www.linkedin.com/in/gregoryfavre"><span class="icon-linkedin"></span> LinkedIn</a><br />
              <a href="https://github.com/gfavre"><span class="icon-github2"></span> GitHub</a>
           </p>
-		</div>
-			
-			<div class="col-lg-7">
-				<h3>Me contacter</h3>
-				<br>
-				<form id="contact-form" action="{% url 'contact_form' %}" method="post">{% csrf_token %}
-				  <div class="form-group">
-				    <label for="name">Votre nom</label>
-				    <input type="name" name="name" class="form-control" id="name" placeholder="Votre nom" required>
-				  </div>
-				  <div class="form-group">
-				    <label for="email">Email address</label>
-				    <input type="email" name="email" class="form-control" id="email" placeholder="nom@domaine.ch" required>
-				  </div>
-				  <div class="form-group">
-				  	<label for="message">Votre message</label>
-				  	<textarea class="form-control" name="body" rows="3" id="message" required></textarea>
-				  </div>
-				  <br>
-				  <button type="submit" class="btn-large btn-theme">Envoyer ce message</button>
-				</form>
-			</div>
-		
-		</div>
-	
-	</div>
+        </div>
+            
+            <div class="col-lg-7">
+                <h3>Me contacter</h3>
+                <br>
+                <form id="contact-form" action="{% url 'contact_form' %}" method="post">{% csrf_token %}
+                  <div class="form-group">
+                    <label for="name">Votre nom</label>
+                    <input type="name" name="name" class="form-control" id="name" placeholder="Votre nom" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="nom@domaine.ch" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Votre message</label>
+                      <textarea class="form-control" name="body" rows="3" id="message" required></textarea>
+                  </div>
+                  <br>
+                  <button type="submit" class="btn-large btn-theme">Envoyer ce message</button>
+                </form>
+            </div>
+        
+        </div>
+    
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/retina.js' %}"></script>
-	<script src="{% static 'js/classie.js' %}"></script>
+    <script src="{% static 'js/classie.js' %}"></script>
     <script src="{% static 'js/smoothscroll.js' %}"></script> 
-	<script src="{% static 'js/gnmenu.js' %}"></script>
-	<script>
-		window.menu = new gnMenu( document.getElementById( 'gn-menu' ) );
-	</script>  
-	<script>
+    <script src="{% static 'js/gnmenu.js' %}"></script>
+    <script>
+        window.menu = new gnMenu( document.getElementById( 'gn-menu' ) );
+    </script>  
+    <script>
 $(document).ready(function(){
     $()
-		$('.carousel').carousel({
-		  interval: 5500
-		  })
+        $('.carousel').carousel({ interval: 5500});
         $('#contact-link').click(function(){
             $('#name').focus();
         });
         
         $('#contact-form').validate({
-	    rules: {
-	      name: {
-	        minlength: 2,
-	        required: true
-	      },
-	      email: {
-	        required: true,
-	        email: true
-	      },
-	      message: {
-	        minlength: 2,
-	        required: true
-	      }
-	    },
-	    
-	    messages: {
-			name: "Ce champ est obligatoire",
-			body: "Ce champ est obligatoire",
-			email: "Merci d'entrer une adresse email valide",
+        rules: {
+          name: {
+            minlength: 2,
+            required: true
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          message: {
+            minlength: 2,
+            required: true
+          }
+        },
+        
+        messages: {
+            name: "Ce champ est obligatoire",
+            body: "Ce champ est obligatoire",
+            email: "Merci d'entrer une adresse email valide",
        
-		},
-	    
-	    
-			highlight: function(element) {
-				$(element).closest('.control-group').removeClass('success').addClass('error');
-			},
-			success: function(element) {
-				element
-				.text('OK!').addClass('valid')
-				.closest('.control-group').removeClass('error').addClass('success');
-			}
-	  });
+        },
+        
+        
+            highlight: function(element) {
+                $(element).closest('.control-group').removeClass('success').addClass('error');
+            },
+            success: function(element) {
+                element
+                .text('OK!').addClass('valid')
+                .closest('.control-group').removeClass('error').addClass('success');
+            }
+      });
 
         
 });
-	</script>
-	
-    {% block extra_js %}{% endblock extra_js %}
+    </script>
+    
+    <script src="{% static 'js/jquery.subwayMap.js' %}"></script>
+    <script>
+        $(".subway-map").subwayMap();
+    </script>
+    
+    {% render_block extra_js %}
 
   </body>
 </html>

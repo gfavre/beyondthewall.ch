@@ -172,6 +172,13 @@ a.symbol:before {
 }
 
 #testimonial {
+   text-align:center;
+    min-height: 440px;
+	width: 100%;
+	margin-top: 40px;
+	padding-top:40px;
+}
+/*#testimonial {
 	background: url(../img/mint.jpg) no-repeat center top;
 	margin-top: 80px;
 	padding-top:80px;
@@ -190,8 +197,15 @@ a.symbol:before {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}*/
+#skills-map {
+    color: white;
+    background: url(../img/mint.jpg) center top;
+    a {
+        color: white;
+    }
 }
-
+/*
 #testimonial h1 {
 	color: white;
 	font-size: 38px;
@@ -202,7 +216,7 @@ a.symbol:before {
 	font-size: 20px;
 	font-weight: 700;
 }
-
+*/
 #footerwrap {
 	background-color: #2f2f2f;
 	color: white;

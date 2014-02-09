@@ -1,0 +1,27 @@
+
+.subway-map {
+  margin: 0;
+  width: 48*12px;
+  height:624px;
+  .text {
+    text-decoration: none;
+  }
+  span { margin: 5px 5px 5px 0;}
+  
+    
+}
+.map-legend {
+  width: 250px;
+  height:400px;
+  margin-top: 48px;
+    
+  div { height: 25px;
+        span {
+            margin-right: 5px;
+        }
+  }
+  
+
+}
+
+

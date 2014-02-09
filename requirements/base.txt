@@ -1,4 +1,4 @@
-Django==1.5.1
+Django==1.5.5
 bpython==0.12
 django-braces==1.2.2
 django-model-utils==1.4.0
@@ -6,3 +6,4 @@ logutils==0.3.3
 South==0.8.1
 psycopg2==2.5
 django-contact-form==1.0
+django-sekizai==0.7
