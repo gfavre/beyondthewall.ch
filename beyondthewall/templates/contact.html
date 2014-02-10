@@ -1,0 +1,44 @@
+{% load staticfiles %}
+
+
+    
+<div class="col-lg-7">
+    <h3>Me contacter</h3>
+    <br>
+    <form id="contact-form" action="{% url 'contact_form' %}" method="post">{% csrf_token %}
+      <div class="form-group">
+        <label for="name">Votre nom</label>
+        <input type="name" name="name" class="form-control" id="name" placeholder="Votre nom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" placeholder="nom@domaine.ch" required>
+      </div>
+      <div class="form-group">
+          <label for="message">Votre message</label>
+          <textarea class="form-control" name="body" rows="3" id="message" required></textarea>
+      </div>
+      <br>
+      <button type="submit" class="btn-large btn-theme">Envoyer ce message</button>
+    </form>
+</div>
+
+<div class="col-lg-5" itemscope itemtype="http://schema.org/LocalBusiness">
+  <h3>Adresse</h3>
+  <p>
+    <h4 itemprop="name">Beyond the Wall SàRL</h4>
+    <span itemprop="founder" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Gregory Favre</span></span><br/>
+    <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">Rue de Riant-Coteau 134</span><br/>
+      <abbr itemprop="addressCountry" title="Switzerland">CH</abbr>-<span itemprop="postalCode">1196</span> <span itemprop="addressLocality">Gland</span><br/>
+    </address>
+    Tél: <a href="tel:+41 79 599 09 06" itemprop="telephone">+41 79 599 09 06</a>
+  </p>
+  <h3>Vie numérique</h3>
+  <p>
+     <a href="mailto:info@beyondthewall.ch" itemprop="email"><span class="icon-mail"></span> email</a><br />
+     <a href="http://www.twitter.com/FavreGregory"><span class="icon-twitter"></span> Twitter</a><br />
+     <a href="https://www.linkedin.com/in/gregoryfavre"><span class="icon-linkedin"></span> LinkedIn</a><br />
+     <a href="https://github.com/gfavre"><span class="icon-github2"></span> GitHub</a>
+  </p>
+</div>
