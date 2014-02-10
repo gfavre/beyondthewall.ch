@@ -117,6 +117,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 ########## END STATIC FILE CONFIGURATION
 
@@ -214,6 +215,7 @@ THIRD_PARTY_APPS = (
     # Database migration helpers:
     'south',
     'sekizai',
+    'compressor',
 )
 
 # Apps specific for this project go here.
@@ -263,3 +265,5 @@ LOGGING = {
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#wsgi-application
 WSGI_APPLICATION = '%s.wsgi.application' % SITE_NAME
 ########## END WSGI CONFIGURATION
+
+COMPRESS_ENABLED=True
