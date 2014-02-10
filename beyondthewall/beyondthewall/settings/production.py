@@ -76,7 +76,7 @@ DATABASES = {
 CACHES = {
     'default': {
         "BACKEND": "redis_cache.cache.RedisCache",
-        "LOCATION": "127.0.0.1:14387:1",
+        "LOCATION": "127.0.0.1:14387:2",
         "OPTIONS": {
             "CLIENT_CLASS": "redis_cache.client.DefaultClient",
         },
