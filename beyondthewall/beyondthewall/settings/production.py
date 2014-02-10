@@ -79,7 +79,7 @@ CACHES = {
         "LOCATION": "127.0.0.1:14387:1",
         "OPTIONS": {
             "CLIENT_CLASS": "redis_cache.client.DefaultClient",
-        }',
+        },
     }
 }
 
