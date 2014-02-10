@@ -98,6 +98,7 @@
     <script src="{% static 'js/smoothscroll.js' %}"></script> 
     <script src="{% static 'js/gnmenu.js' %}"></script>
     <script src="{% static 'js/jquery.subwayMap.js' %}"></script>
+        {% endcompress %}
 
     <script>
         window.menu = new gnMenu( document.getElementById( 'gn-menu' ) );
@@ -141,7 +142,6 @@ $(document).ready(function(){
       ga('send', 'pageview');
     </script>
 
-        {% endcompress %}
 
     
         {% render_block extra_js %}
