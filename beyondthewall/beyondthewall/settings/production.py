@@ -73,13 +73,20 @@ DATABASES = {
 
 ########## CACHE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#caches
+#CACHES = {
+#    'default': {
+#        "BACKEND": "redis_cache.cache.RedisCache",
+#        "LOCATION": "127.0.0.1:14387:2",
+#        "OPTIONS": {
+#            "CLIENT_CLASS": "redis_cache.client.DefaultClient",
+#        },
+#    }
+#}
+
 CACHES = {
     'default': {
-        "BACKEND": "redis_cache.cache.RedisCache",
-        "LOCATION": "127.0.0.1:14387:2",
-        "OPTIONS": {
-            "CLIENT_CLASS": "redis_cache.client.DefaultClient",
-        },
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'unique-snowflake'
     }
 }
 
@@ -97,14 +104,6 @@ STATIC_ROOT = get_env_setting('STATIC_ROOT')
 
 ########## END STATIC FILE CONFIGURATION
 COMPRESS_ENABLED=True
-
-
-
-
-
-
-
-
 
 
 ########## SECRET CONFIGURATION
