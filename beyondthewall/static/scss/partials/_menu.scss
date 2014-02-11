@@ -6,15 +6,6 @@
 		box-sizing: border-box;
 }
 
-@font-face {
-		font-weight: normal;
-		font-style: normal;
-		font-family: 'ecoicons';
-		src: url("../fonts/ecoicons/ecoicons.eot");
-		src: url("../fonts/ecoicons/ecoicons.eot?#iefix") format("embedded-opentype"), url("../fonts/ecoicons/ecoicons.woff") format("woff"), url("../fonts/ecoicons/ecoicons.ttf") format("truetype"), url("../fonts/ecoicons/ecoicons.svg#ecoicons") format("svg");
-}
-
-/* Icomoon.com */
 
 .gn-menu-main,
 .gn-menu-main ul {
@@ -36,7 +27,7 @@
 		width: 100%;
 		height: 60px;
 		font-size: 13px;
-		z-index: 1;
+		z-index: 4000;
 }
 
 .gn-menu-main a {
@@ -143,7 +134,7 @@
 
 input.gn-search {
 		position: relative;
-		z-index: 10;
+		z-index: 4010;
 		padding-left: 60px;
 		outline: none;
 		border: none;
@@ -213,20 +204,6 @@ input.gn-search:focus {
 }
 
 
-/*.gn-icon::before {
-		display: inline-block;
-		width: 60px;
-		text-align: center;
-		text-transform: none;
-		font-weight: normal;
-		font-style: normal;
-		font-variant: normal;
-		font-family: 'ecoicons';
-		line-height: 1;
-		speak: none;
-		-webkit-font-smoothing: antialiased;
-}
-*/
 
 /* if an icon anchor has a span, hide the span */
 
@@ -248,14 +225,7 @@ input.gn-search:focus {
     font-size: 2em;
 }
 
-/*
-.gn-icon-menu::before {
-		margin-left: -45px;
-		vertical-align: -2px;
-		width: 30px;
-		background: white;
-		box-shadow: 0 3px $primary-color, 0 -6px white, 0 -9px $primary-color, 0 -12px white;
-}*/
+
 
 .no-touch .gn-icon-menu:hover::before,
 .no-touch .gn-icon-menu.gn-selected:hover::before {

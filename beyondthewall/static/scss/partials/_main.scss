@@ -118,7 +118,7 @@ a:after {
 
 #foliowrap {
 	background: url(../img/foliowrap.jpg) no-repeat center top;
-	margin-top: 30px;
+	margin-top: 0;
 	padding-top:50px;
 	text-align:center;
 	background-attachment: relative;
@@ -145,7 +145,7 @@ a:after {
 
 #testimonial {
    text-align:center;
-    min-height: 440px;
+    min-height: 220px;
 	width: 100%;
 	margin-top: 40px;
 	padding-top:40px;
@@ -173,10 +173,11 @@ a:after {
 #skills-map {
     color: white;
     background: url(../img/mint.jpg) center top;
-    a, h3 {
+    padding-bottom: 3em;
+    a, h2 {
         color: white;
     }
-    h3 {
+    h2 {
         text-align: center;
     }
     
@@ -196,7 +197,7 @@ a:after {
 #footerwrap {
 	background-color: #2f2f2f;
 	color: white;
-	margin-top: 50px;
+	margin-top: 0;
 	padding-top: 40px;
 	padding-bottom: 60px;
 	text-align: left;
@@ -222,15 +223,15 @@ a:after {
 	text-align: center
 }
 
-.about h3 {
+.about h2 {
 	font-size: 35px;
 }
 
-.about h4 {
+.about h3 {
 	font-size: 20px;
 	text-align: left;
 }
-.about h5 {
+.about h4 {
 	font-size: 14px;
 	color: $contrast-color;
 	font-weight: 700;
