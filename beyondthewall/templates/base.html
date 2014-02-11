@@ -88,18 +88,17 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
-        {% compress js %}
 
+{% compress js %}
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
     <script src="{% static 'js/modernizr.custom.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/retina.js' %}"></script>
     <script src="{% static 'js/classie.js' %}"></script>
     <script src="{% static 'js/smoothscroll.js' %}"></script> 
     <script src="{% static 'js/gnmenu.js' %}"></script>
     <script src="{% static 'js/jquery.subwayMap.js' %}"></script>
-
     <script>
         window.menu = new gnMenu( document.getElementById( 'gn-menu' ) );
     </script>
