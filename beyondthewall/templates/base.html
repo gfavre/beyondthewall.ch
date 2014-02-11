@@ -1,5 +1,4 @@
 {% load staticfiles %}
-{% load sekizai_tags %}
 {% load compress %}
 
 <!DOCTYPE html>
@@ -15,7 +14,6 @@
 
     <link rel="icon" href="{% static 'img/favicon.ico' %}" />
     <link href="{% static 'css/style.css' %}" rel="stylesheet" media="screen">
-
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
         
@@ -140,12 +138,10 @@ $(document).ready(function(){
       ga('create', 'UA-47930381-1', 'beyondthewall.ch');
       ga('send', 'pageview');
     </script>
-        {% endcompress %}
+    {% block extra_js %}{% endblock extra_js %}
 
-
+    {% endcompress %}
     
-        {% render_block extra_js %}
-
   </body>
 </html>
 

@@ -5,9 +5,19 @@
   height:624px;
   .text {
     text-decoration: none;
+    background-color: $primary-color;
   }
   span { margin: 5px 5px 5px 0;}
   
+  .split-worlds {
+    width:100%; 
+    position:absolute;
+    top:539px;
+    z-index:1; 
+    color: white;
+    
+    hr { margin: .5em 0; }
+  }
     
 }
 .map-legend {

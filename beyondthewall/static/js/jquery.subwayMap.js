@@ -359,6 +359,22 @@ THE SOFTWARE.
                 ctx.lineWidth = width/2;
                 ctx.arc(x, y, width/2, 0, Math.PI * 2, true);
                 break;
+            case "magic":
+               ctx.lineWidth = width;
+               //ctx.arc(x, y, width * 1, 0, Math.PI * 2, true);
+               var r = 11; // radius
+               var m = 0.5; // fraction of radius for inset
+               var p = 5; // nb of points
+               ctx.translate(x, y);
+               ctx.moveTo(0,0-r);
+               for (var i = 0; i < p; i++){
+                 ctx.rotate(Math.PI / p);
+                 ctx.lineTo(0, 0 - (r*m));
+                 ctx.rotate(Math.PI / p);
+                 ctx.lineTo(0, 0 - r);
+               }
+               ctx.fill();
+                              
         }
         ctx.closePath();
         ctx.stroke();
@@ -402,8 +418,11 @@ THE SOFTWARE.
                 pos = "text-align: right; margin:0 " + offset + "px 0 -" + (100 + offset) + "px";
                 topOffset = offset;
                 break;
+            case 'starred':
+                pos = "text-align: center; font-weight: bold; margin: -12px 0 0 " + offset*1.5 + "px";
+                break;
         }
-        var style = (textClass != "" ? "class='" + textClass + "' " : "") + "style='" + (textClass == "" ? "font-size:8pt;font-family:Verdana,Arial,Helvetica,Sans Serif;text-decoration:none;" : "") + "width:100px;" + (pos != "" ? pos : "") + ";position:absolute;top:" + (y + el.offset().top -el.offset().top - (topOffset > 0 ? topOffset : 0)) + "px;left:" + (x + offset + 3) + "px;z-index:3000;'";
+        var style = (textClass != "" ? "class='" + textClass + ' ' + data.marker.toLowerCase() + "' " : "") + "style='" + (textClass == "" ? "font-size:8pt;font-family:Verdana,Arial,Helvetica,Sans Serif;text-decoration:none;" : "") + "width:100px;" + (pos != "" ? pos : "") + ";position:absolute;top:" + (y + el.offset().top -el.offset().top - (topOffset > 0 ? topOffset : 0)) + "px;left:" + (x + offset + 3) + "px;z-index:3000;'";
         if (data.link != "")
             $("<a " + style + " title='" + data.title.replace(/\\n/g,"<br />") + "' href='" + data.link + "' target='_new'>" + data.label.replace(/\\n/g,"<br />") + "</span>").appendTo(el);
         else

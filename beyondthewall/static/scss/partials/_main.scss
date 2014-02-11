@@ -173,9 +173,13 @@ a:after {
 #skills-map {
     color: white;
     background: url(../img/mint.jpg) center top;
-    a {
+    a, h3 {
         color: white;
     }
+    h3 {
+        text-align: center;
+    }
+    
 }
 /*
 #testimonial h1 {
