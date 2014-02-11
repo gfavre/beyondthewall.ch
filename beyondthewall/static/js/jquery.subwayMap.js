@@ -193,7 +193,7 @@ THE SOFTWARE.
                 });
                 if (nodes.length > 0)
                     self._drawLine(el, scale, rows, columns, color, (lineTextClass != "" ? lineTextClass : textClass), lineWidth, nodes, reverseMarkers);
-                $(ul).remove();
+                //$(ul).remove();
             });
 
             if ((lineLabels.length > 0) && (legendId != ""))

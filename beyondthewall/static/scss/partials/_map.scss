@@ -9,7 +9,7 @@
   }
   span { margin: 5px 5px 5px 0;}
   
-  .split-worlds {
+  .where-the-magic-begins {
     width:100%; 
     position:absolute;
     top:539px;
@@ -18,21 +18,34 @@
     
     hr { margin: .5em 0; }
   }
-    
-}
-.map-legend {
-  /*height:400px;*/
-  margin-top: 48px;
-    
-  div { height: 25px;
-        width:400px;
-        span {
-            margin: 8px .5em 0 0;
-        }
-        
-  }    
+  ul, h3 { display:none; }
+  li:empty {display: none;}
+
   
-
+  @media only screen and 
+         (min-device-width: 320px) and 
+         (max-device-width : 568px){
+      canvas, a.text, span.text { display:none; }
+      ul, h3 {display: block;}
+      
+      .where-the-magic-begins{ display:none; }
+      .map-legend {display: none;}
+  }
+  
+    
 }
 
+.map-legend {
+  margin-top: 48px;
+  div { 
+      height: 25px;
+      width:400px;
+      span { margin: 8px .5em 0 0;}    
+  }
+  @media only screen and 
+         (min-device-width: 320px) and 
+         (max-device-width : 568px){
+    display: none;
+  }
+}
 
