@@ -172,6 +172,8 @@ a:after {
 }*/
 #skills-map {
     color: white;
+    page-break-inside: avoid;
+
     background: url(../img/mint.jpg) center top;
     padding-bottom: 3em;
     a, h2, h3 {
@@ -195,6 +197,8 @@ a:after {
 }
 */
 #footerwrap {
+    page-break-inside: avoid;
+
 	background-color: #2f2f2f;
 	color: white;
 	margin-top: 0;
