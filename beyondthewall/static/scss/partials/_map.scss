@@ -23,14 +23,21 @@
   ul, h3 { display:none; }
   li:empty { display: none;}
   
-  @media only screen and 
+  @media only screen and (max-width: 526px) {
+      width: auto;
+      canvas, a.text, span.text { display:none; }
+      ul, h3 {display: block;}
+      
+      .where-the-magic-begins{ display:none; }
+  }
+/*  @media only screen and 
          (min-device-width: 320px) and 
          (max-device-width : 568px){
       canvas, a.text, span.text { display:none; }
       ul, h3 {display: block;}
       
       .where-the-magic-begins{ display:none; }
-  }
+  }*/
   
     
 }
@@ -43,9 +50,7 @@
       //width:100%;
       span { margin: 8px .5em 0 0;}    
   }
-  @media only screen and 
-         (min-device-width: 320px) and 
-         (max-device-width : 568px){
+  @media only screen and (max-width: 526px) {
     display: none;
   }
 }
