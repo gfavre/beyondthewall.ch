@@ -38,7 +38,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/Users/grfavre/Documents/beyondthewall.ch/dev.sqlite',
+        'NAME': '/Users/grfavre/Documents/Beyond the Wall/beyondthewall.ch/dev.sqlite',
     }
 }
 

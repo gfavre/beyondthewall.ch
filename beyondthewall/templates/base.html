@@ -28,108 +28,8 @@
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#gn-menu">
-    <div class="container">
-        <ul id="gn-menu" class="gn-menu-main hidden-print">
-            <li class="gn-trigger">
-                <a class="gn-icon gn-icon-menu"><span class="icon-menu"></span><span class="hidden">Menu</span></a>
-                <nav class="gn-menu-wrapper">
-                    <div class="gn-scroller">
-                        <ul class="gn-menu">
-                            <li><a href="#home" class="gn-icon smoothScroll"><span class="icon-home"></span> Accueil</a></li>
-                            <li><a href="#about" class="gn-icon smoothScroll"><span class="icon-profile"></span> À propos</a></li>
-                            <li><a href="#portfolio" class="gn-icon smoothScroll"><span class="icon-image"></span> Réalisations</a></li>
-                            <!--<li><a href="#blog" class="gn-icon smoothScroll"><span class="icon-newspaper"></span> Blog</a></li>-->
-                            <li><a href="#contact" id="contact-link" class="gn-icon  smoothScroll"> <span class="icon-mail2"></span> Contact</a></li>
-                        </ul>
-                    </div><!-- /gn-scroller -->
-                </nav>
-            </li>
-            <li><a href="#home" class="smoothScroll">Beyond the Wall</a></li>
-        </ul>
-    </div>
-
-    <section id="home" name="home"></section>
-    <div id="headerwrap" class="hidden-print">
-        <div class="container">
-            <div class="col-lg-8">
-            <h1>Je crée des solutions informatiques sur mesure.</h1>
-            </div>
-            <div class="col-lg-4">
-            </div>
-        </div><!-- /container -->
-    </div><!-- /headerwrap -->
-
-    <section id="about" name="about"></section>
-    <div class="container about">
-        
-        <div class="col-lg-6 col-lg-offset-3">{% include "about.html" %}</div>
-    </div>
-
-    <div id="testimonial">
-      <div class="container">{% include "definitions.html" %}</div>
-    </div>
-
-    <div id="skills-map">                      
-      <div class="container">{% include "map.html" %}</div>
-    </div>
-    
-    <section id="portfolio" name="portfolio"></section>
-    <div id="foliowrap" class="hidden-print">
-      <div class="container">{% include "projects.html" %}</div>
-    </div>
-    
-    
-    <section id="contact" name="contact"></section>
-    <div id="footerwrap">
-      <div class="container">{% include "contact.html" %}</div>
-    </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-
-{% compress js %}
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
-    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
-    <script src="{% static 'js/modernizr.custom.js' %}"></script>
-    <script src="{% static 'js/retina.js' %}"></script>
-    <script src="{% static 'js/classie.js' %}"></script>
-    <script src="{% static 'js/smoothscroll.js' %}"></script> 
-    <script src="{% static 'js/gnmenu.js' %}"></script>
-    <script src="{% static 'js/jquery.subwayMap.js' %}"></script>
-    <script>
-        window.menu = new gnMenu( document.getElementById( 'gn-menu' ) );
-    </script>
-    <script>
-$(document).ready(function(){
-  $('#contact-link').click(function(){ $('#name').focus();});
-  $('.carousel').carousel({ interval: 5500});
-  $(".subway-map").subwayMap();
-  $('#contact-form').validate({
-    rules: {
-      name: {minlength: 2, required: true },
-      email: {required: true, email: true },
-      message: { minlength: 2, required: true }
-    },
-    
-    messages: {
-      name: "Ce champ est obligatoire",
-      body: "Ce champ est obligatoire",
-      email: "Merci d'entrer une adresse email valide",
-    },
-        
-    highlight: function(element) {
-      $(element).closest('.control-group').removeClass('success').addClass('error');
-    },
-    success: function(element) {
-      element.text('OK!').addClass('valid')
-             .closest('.control-group').removeClass('error').addClass('success');
-    }
-  });
-});    
-    </script>
-
+    {% block content %}{% endblock content %}
+    {% block extra_js %}{% endblock extra_js %}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -139,10 +39,6 @@ $(document).ready(function(){
       ga('create', 'UA-47930381-1', 'beyondthewall.ch');
       ga('send', 'pageview');
     </script>
-    {% block extra_js %}{% endblock extra_js %}
-
-    {% endcompress %}
-    
   </body>
 </html>
 

@@ -1,96 +1,53 @@
+{% extends "base.html" %}
+
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="{% static 'ico/favicon.png">
-    <title>{% block title %}Beyond the Wall - développement informatique sur mesure{% endblock title %}</title>
+{% block title %}Merci! - Beyond the Wall - développement informatique sur mesure{% endblock title %}
+{% block content %}
+<div class="container">
+    <ul id="gn-menu" class="gn-menu-main hidden-print">
+        <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu" href='/'><span class="icon-menu"></span><span class="hidden">Menu</span></a>
+        </li>
+        <li><a href="/" class="smoothScroll">Beyond the Wall</a></li>
+    </ul>
+</div>
 
+<section id="home" name="home"></section>
+<div id="headerwrap" class="hidden-print">
+    <div class="container">
+        <div class="col-lg-8">
+        <h1>Merci!</h1>
+        <h2>J'ai bien reçu votre message et vous recontacterai dès que possible</h2>
+        </div>
+        <div class="col-lg-4">
+        </div>
+    </div><!-- /container -->
+</div>
+<div class="container">
+  <div class="row"  itemscope itemtype="http://schema.org/LocalBusiness">
+    <div class="col-sm-6">
+      <h3>Adresse</h3>
+      <p>
+        <h4 itemprop="name">Beyond the Wall SàRL</h4>
+        <span itemprop="founder" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Gregory Favre</span></span><br/>
+        <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="streetAddress">Rue de Riant-Coteau 134</span><br/>
+          <abbr itemprop="addressCountry" title="Switzerland">CH</abbr>-<span itemprop="postalCode">1196</span> <span itemprop="addressLocality">Gland</span><br/>
+        </address>
+        Tél: <a href="tel:+41795990906" itemprop="telephone">+41 79 599 09 06</a>
+      </p>
+    </div>
+    <div class="col-sm-6">
+    <h3>Vie numérique</h3>
+    <p>
+       <a href="mailto:info@beyondthewall.ch" itemprop="email"><span class="icon-mail"></span> email</a><br />
+       <a href="http://www.twitter.com/FavreGregory"><span class="icon-twitter"></span> Twitter</a><br />
+       <a href="https://www.linkedin.com/in/gregoryfavre"><span class="icon-linkedin"></span> LinkedIn</a><br />
+       <a href="https://github.com/gfavre"><span class="icon-github2"></span> GitHub</a>
+    </p>
+    </div>
+  </div>
+</div>
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" media="screen">
-    
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/main.css' %}" rel="stylesheet">
-    
-	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
-	<link rel="stylesheet" href="{% static 'css/component.css' %}">
-
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-	<script src="{% static 'js/Chart.js' %}"></script>
-	<script src="{% static 'js/modernizr.custom.js' %}"></script>
-	
-	
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="{% static 'js/html5shiv.js' %}"></script>
-      <script src="{% static 'js/respond.min.js' %}"></script>
-    <![endif]-->
-    {% block extra_css %}{% endblock extra_css %}
-  </head>
-
-  <body data-spy="scroll" data-offset="0" data-target="#gn-menu">
-  	<!-- ========== MAIN MENU ========== -->
-	<div class="container">
-		<ul id="gn-menu" class="gn-menu-main">
-			<li class="gn-trigger">
-				<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-				<nav class="gn-menu-wrapper">
-					<div class="gn-scroller">
-						<ul class="gn-menu">
-							<li class="gn-search-item">
-								<input placeholder="Search" type="search" class="gn-search">
-								<a class="gn-icon gn-icon-search"><span>Search</span></a>
-							</li>
-							<li><a href="#home" class="gn-icon gn-icon-home smoothScroll">Home</a></li>
-							<li><a href="#about" class="gn-icon gn-icon-archive smoothScroll">About</a></li>
-							<li><a href="#portfolio" class="gn-icon gn-icon-pictures smoothScroll">Portfolio</a></li>
-							<li><a href="#blog" class="gn-icon gn-icon-article smoothScroll">Blog</a></li>
-							<li><a href="#contact" class="gn-icon gn-icon-envelop smoothScroll">Contact</a></li>
-						</ul>
-					</div><!-- /gn-scroller -->
-				</nav>
-			</li>
-			<li><a href="#home" class="smoothScroll">Beyond the Wall</a></li>
-		</ul>
-	</div><!-- /container -->
-
-	<!-- ========== HEADER SECTION ========== -->
-	<section id="home" name="home"></section>
-	<div id="headerwrap">
-		<div class="container">
-			<div class="col-lg-8">
-			<h1>Merci!</h1>
-			</div>
-			<div class="col-lg-4">
-			</div>
-		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/retina.js' %}"></script>
-	<script src="{% static 'js/classie.js' %}"></script>
-    <script src="{% static 'js/smoothscroll.js' %}"></script> 
-	<script src="{% static 'js/gnmenu.js' %}"></script>
-	<script>
-		new gnMenu( document.getElementById( 'gn-menu' ) );
-	</script>  
-	<script>
-		$('.carousel').carousel({
-		  interval: 5500
-		  })
-	</script>
-	
-    {% block extra_js %}{% endblock extra_js %}
-
-  </body>
-</html>
-
+<!-- /headerwrap -->
+{% endblock content %}

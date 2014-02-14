@@ -17,7 +17,7 @@ class TextPlainView(TemplateView):
 
 
 urlpatterns = patterns('',
-    url(r'^$', TemplateView.as_view(template_name='base.html')),
+    url(r'^$', TemplateView.as_view(template_name='home.html')),
     url(r'^contact/', include('contact.urls')),
     
     url(r'^robots\.txt$', TextPlainView.as_view(template_name='robots.txt')),
