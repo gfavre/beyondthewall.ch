@@ -118,10 +118,12 @@ a:after {
 
 
 #foliowrap {
-	background: url(../img/foliowrap.jpg) no-repeat center top;
+	//background: url(../img/foliowrap.jpg) no-repeat center top;
+	//background-color: $primary-color;
 	margin-top: 0;
 	padding-top:50px;
 	text-align:center;
+	/*
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 800px;
@@ -136,13 +138,18 @@ a:after {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+*/
+    h3 {
+        font-size: 35px;
+        text-align: center;
+    }
 }
 
-#foliowrap h3 {
+/*#foliowrap h3 {
 	font-size: 35px;
 	color: white;
 	text-align: center;
-}
+}*/
 
 #testimonial {
    text-align:center;
@@ -174,7 +181,8 @@ a:after {
 #skills-map {
     color: white;
     page-break-inside: avoid;
-    background: url(../img/mint.jpg) center top;
+    //background: url(../img/mint.jpg) center top;
+    background-color: $primary-color;
     padding-bottom: 3em;
     a, h2, h3 {
         color: white;
@@ -201,7 +209,8 @@ a:after {
 #footerwrap {
     page-break-inside: avoid;
 
-	background-color: #2f2f2f;
+	//background-color: #2f2f2f;
+	background-color: $primary-color;
 	color: white;
 	margin-top: 0;
 	padding-top: 40px;
@@ -226,25 +235,25 @@ a:after {
 
 .about {
 	padding-top: 40px;
-	text-align: center
-}
-
-.about h2 {
-	font-size: 35px;
-}
-
-.about h3 {
-	font-size: 20px;
-	text-align: left;
-}
-.about h4 {
+	
+    h2 {
+	  font-size: 35px;
+	  text-align: center
+    }
+    
+    h3 {
+	  font-size: 20px;
+	   text-align: left;
+    }
+    
+    h4 {
 	font-size: 14px;
 	color: $contrast-color;
 	font-weight: 700;
-}
+	text-align: center;
+    }
 
-.about p {
-	text-align: left;
+    
 }
 
 #chartwrap {

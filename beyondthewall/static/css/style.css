@@ -3918,28 +3918,34 @@ hr {
       font-size: 70px; } }
 
 #foliowrap {
-  background: url(../img/foliowrap.jpg) no-repeat center top;
   margin-top: 0;
   padding-top: 50px;
   text-align: center;
-  background-attachment: relative;
-  background-position: center center;
-  min-height: 800px;
-  width: 100%;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  	/*
+  	background-attachment: relative;
+  	background-position: center center;
+  	min-height: 800px;
+  	width: 100%;
+  	
+      -webkit-background-size: 100%;
+      -moz-background-size: 100%;
+      -o-background-size: 100%;
+      background-size: 100%;
+  
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  */ }
+  #foliowrap h3 {
+    font-size: 35px;
+    text-align: center; }
 
-#foliowrap h3 {
-  font-size: 35px;
-  color: white;
-  text-align: center; }
-
+/*#foliowrap h3 {
+	font-size: 35px;
+	color: white;
+	text-align: center;
+}*/
 #testimonial {
   text-align: center;
   min-height: 220px;
@@ -3970,7 +3976,7 @@ hr {
 #skills-map {
   color: white;
   page-break-inside: avoid;
-  background: url(../img/mint.jpg) center top;
+  background-color: #2d3441;
   padding-bottom: 3em; }
   #skills-map a, #skills-map h2, #skills-map h3 {
     color: white; }
@@ -3992,7 +3998,7 @@ hr {
 */
 #footerwrap {
   page-break-inside: avoid;
-  background-color: #2f2f2f;
+  background-color: #2d3441;
   color: white;
   margin-top: 0;
   padding-top: 40px;
@@ -4011,23 +4017,18 @@ hr {
   font-size: 18px; }
 
 .about {
-  padding-top: 40px;
-  text-align: center; }
-
-.about h2 {
-  font-size: 35px; }
-
-.about h3 {
-  font-size: 20px;
-  text-align: left; }
-
-.about h4 {
-  font-size: 14px;
-  color: #64758f;
-  font-weight: 700; }
-
-.about p {
-  text-align: left; }
+  padding-top: 40px; }
+  .about h2 {
+    font-size: 35px;
+    text-align: center; }
+  .about h3 {
+    font-size: 20px;
+    text-align: left; }
+  .about h4 {
+    font-size: 14px;
+    color: #64758f;
+    font-weight: 700;
+    text-align: center; }
 
 #chartwrap {
   width: 100%;
