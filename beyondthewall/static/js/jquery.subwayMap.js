@@ -422,7 +422,7 @@ THE SOFTWARE.
                 pos = "text-align: center; font-weight: bold; margin: -12px 0 0 " + offset*1.5 + "px";
                 break;
         }
-        var style = (textClass != "" ? "class='" + textClass + ' ' + data.marker.toLowerCase() + "' " : "") + "style='" + (textClass == "" ? "font-size:8pt;font-family:Verdana,Arial,Helvetica,Sans Serif;text-decoration:none;" : "") + "width:100px;" + (pos != "" ? pos : "") + ";position:absolute;top:" + (y + el.offset().top -el.offset().top - (topOffset > 0 ? topOffset : 0)) + "px;left:" + (x + offset + 3) + "px;'";
+        var style = (textClass != "" ? "class='" + textClass + ' ' + data.marker.toLowerCase() + "' " : "") + "style='" + (textClass == "" ? "font-size:8pt;font-family:Verdana,Arial,Helvetica,Sans Serif;text-decoration:none;" : "") + "width:100px;" + (pos != "" ? pos : "") + ";position:absolute;top:" + (y + el.offset().top -el.offset().top - (topOffset > 0 ? topOffset : 0)) + "px;left:" + (x + offset + 3) + "px;z-index:20;'";
         if (data.link != "")
             $("<a " + style + " title='" + data.title.replace(/\\n/g,"<br />") + "' href='" + data.link + "' target='_new'>" + data.label.replace(/\\n/g,"<br />") + "</span>").appendTo(el);
         else
