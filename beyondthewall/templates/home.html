@@ -14,7 +14,8 @@
                     <ul class="gn-menu">
                         <li><a href="#home" class="gn-icon smoothScroll"><span class="icon-home"></span> Accueil</a></li>
                         <li><a href="#about" class="gn-icon smoothScroll"><span class="icon-profile"></span> À propos</a></li>
-                        <li><a href="#portfolio" class="gn-icon smoothScroll"><span class="icon-image"></span> Réalisations</a></li>
+                        <li><a href="#skills-map" class="gn-icon smoothScroll"><span class="icon-direction"> </span> Mes compétences</a></li>
+                        <li><a href="#why-me" class="gn-icon smoothScroll"><span class="icon-bubbles"></span> Pourquoi travailler ensemble?</a></li>
                         <!--<li><a href="#blog" class="gn-icon smoothScroll"><span class="icon-newspaper"></span> Blog</a></li>-->
                         <li><a href="#contact" id="contact-link" class="gn-icon  smoothScroll"> <span class="icon-mail2"></span> Contact</a></li>
                     </ul>
@@ -42,18 +43,12 @@
     <div class="col-lg-6 col-lg-offset-3">{% include "home/about.html" %}</div>
 </div>
 
-{% comment %}
-<div id="testimonial">
-  <div class="container">{% include "home/definitions.html" %}</div>
-</div>
-{% endcomment %}
-
 <div id="skills-map">                      
   <div class="container">{% include "home/map.html" %}</div>
 </div>
 
 
-<div>
+<div id="why-me">
   <div class="container about">
       <div class="col-lg-6 col-lg-offset-3">{% include "home/why-me.html" %}</div>
   </div>
@@ -91,7 +86,6 @@ window.menu = new gnMenu( document.getElementById( 'gn-menu' ) );
 <script>
 $(document).ready(function(){
   $('#contact-link').click(function(){ $('#name').focus();});
-  $('.carousel').carousel({ interval: 5500});
   $(".subway-map").subwayMap();
   $('#contact-form').validate({
     rules: {
