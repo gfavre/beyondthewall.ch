@@ -145,42 +145,12 @@ a:after {
     }
 }
 
-/*#foliowrap h3 {
-	font-size: 35px;
-	color: white;
-	text-align: center;
-}*/
 
-#testimonial {
-   text-align:center;
-    min-height: 220px;
-	width: 100%;
-	margin-top: 40px;
-	padding-top:40px;
-}
-/*#testimonial {
-	background: url(../img/mint.jpg) no-repeat center top;
-	margin-top: 80px;
-	padding-top:80px;
-	text-align:center;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 440px;
-	width: 100%;
-	
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}*/
 #skills-map {
     color: white;
     page-break-inside: avoid;
+    padding-top: 40px;
+
     //background: url(../img/mint.jpg) center top;
     background-color: $primary-color;
     padding-bottom: 3em;
@@ -256,10 +226,6 @@ a:after {
     
 }
 
-#chartwrap {
-	width: 100%;
-	text-align: center;
-}
 
 .label {
 	padding-bottom: 15px;
