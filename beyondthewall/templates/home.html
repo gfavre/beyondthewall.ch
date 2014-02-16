@@ -39,33 +39,35 @@
 <section id="about" name="about"></section>
 <div class="container about">
     
-    <div class="col-lg-6 col-lg-offset-3">{% include "about.html" %}</div>
+    <div class="col-lg-6 col-lg-offset-3">{% include "home/about.html" %}</div>
 </div>
 
-<!--<div id="testimonial">
-  <div class="container">{% include "definitions.html" %}</div>
-</div>-->
+{% comment %}
+<div id="testimonial">
+  <div class="container">{% include "home/definitions.html" %}</div>
+</div>
+{% endcomment %}
 
 <div id="skills-map">                      
-  <div class="container">{% include "map.html" %}</div>
+  <div class="container">{% include "home/map.html" %}</div>
 </div>
 
 
 <div>
   <div class="container about">
-      <div class="col-lg-6 col-lg-offset-3">{% include "why-me.html" %}</div>
+      <div class="col-lg-6 col-lg-offset-3">{% include "home/why-me.html" %}</div>
   </div>
 </div>
 
 <section id="portfolio" name="portfolio"></section>
 <div id="foliowrap" class="hidden-print">
-  <div class="container">{% include "projects.html" %}</div>
+  <div class="container">{% include "home/projects.html" %}</div>
 </div>
 
 
 <section id="contact" name="contact"></section>
 <div id="footerwrap">
-  <div class="container">{% include "contact.html" %}</div>
+  <div class="container">{% include "home/contact.html" %}</div>
 </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
