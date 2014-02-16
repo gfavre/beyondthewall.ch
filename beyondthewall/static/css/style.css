@@ -3892,6 +3892,9 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
+li {
+  margin-bottom: .33em; }
+
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
@@ -3908,6 +3911,8 @@ hr {
     color: #64758f;
     font-weight: 700;
     text-align: center; }
+  .text-section a {
+    color: #64758f; }
 
 #headerwrap {
   background: url(../img/header-bg.jpg) no-repeat center top;
@@ -3939,7 +3944,11 @@ hr {
 .inverted {
   background-color: #2d3441;
   color: white; }
-  .inverted a, .inverted h2, .inverted h3 {
+  .inverted a {
+    color: #e9e9f7; }
+  .inverted h2, .inverted h3 {
+    color: white; }
+  .inverted a:hover {
     color: white; }
 
 #about h2, #why-me h2 {
@@ -3971,10 +3980,7 @@ hr {
 #skills-map {
   color: white;
   page-break-inside: avoid;
-  padding: 3em 15px 3em 15px;
-  background-color: #2d3441; }
-  #skills-map a, #skills-map h2, #skills-map h3 {
-    color: white; }
+  padding: 3em 15px 3em 15px; }
 
 #footerwrap {
   page-break-inside: avoid;
@@ -3986,8 +3992,6 @@ hr {
     font-size: 28px; }
   #footerwrap p {
     font-size: 18px; }
-  #footerwrap a {
-    color: #e9e9f7; }
 
 .label {
   padding-bottom: 15px; }
@@ -4394,7 +4398,7 @@ label.error {
   .subway-map .where-the-magic-begins {
     position: absolute;
     z-index: 0;
-    left: 0;
+    left: 15px;
     right: 0;
     top: 539px;
     color: white; }
@@ -4423,3 +4427,14 @@ label.error {
   @media only screen and (max-width: 526px) {
     .map-legend {
       display: none; } }
+
+@media print {
+  .col-lg-6.col-lg-offset-3 {
+    width: auto;
+    margin-left: 15px;
+    margin-right: 15px; }
+
+  #skills-map a[href]:after {
+    content: ""; }
+  #skills-map .map-legend {
+    display: none; } }
