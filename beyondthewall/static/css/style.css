@@ -3946,7 +3946,7 @@ li {
   color: white; }
   .inverted a {
     color: #e9e9f7; }
-  .inverted h2, .inverted h3 {
+  .inverted h2, .inverted h3, .inverted h4 {
     color: white; }
   .inverted a:hover {
     color: white; }
