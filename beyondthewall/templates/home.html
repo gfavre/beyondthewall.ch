@@ -27,7 +27,7 @@
     </ul>
 </div>
 
-<section id="home" name="home"></section>
+<section id="home" name="home">
 <div id="headerwrap" class="hidden-print">
     <div class="container">
         <div class="col-lg-8">
@@ -37,15 +37,16 @@
         </div>
     </div><!-- /container -->
 </div><!-- /headerwrap -->
-
-<section id="about" name="about"></section>
+</section>
+<section id="about" name="about">
 <div class="container text-section">
     
     <div class="col-lg-6 col-lg-offset-3">{% include "home/about.html" %}</div>
 </div>
+</section>
 
-<div id="skills-map">                      
-  <div class="container">{% include "home/map.html" %}</div>
+<div id="skills-map" class="inverted">                      
+  <div class="container" >{% include "home/map.html" %}</div>
 </div>
 
 
@@ -62,7 +63,7 @@
 </section>
 
 <section id="contact" name="contact"></section>
-<div id="footerwrap">
+<div id="footerwrap" class="inverted">
   <div class="container">{% include "home/contact.html" %}</div>
 </div>
 <!-- Bootstrap core JavaScript

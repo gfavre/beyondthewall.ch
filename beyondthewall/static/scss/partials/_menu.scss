@@ -27,7 +27,7 @@
 		width: 100%;
 		height: 60px;
 		font-size: 13px;
-		z-index: 4000;
+		z-index: 1000;
 }
 
 .gn-menu-main a {
@@ -134,7 +134,7 @@
 
 input.gn-search {
 		position: relative;
-		z-index: 4010;
+		//z-index: 4010;
 		padding-left: 60px;
 		outline: none;
 		border: none;

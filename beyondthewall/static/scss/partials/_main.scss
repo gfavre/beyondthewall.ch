@@ -24,10 +24,6 @@ p {
     margin-bottom: 25px;
 }
 
-.centered {
-    text-align: center;
-}
-
 /* Links */
 a {
     color: $primary-color;
@@ -55,10 +51,8 @@ a:after {
     -o-transition: color 0.1s ease-in, background 0.1s ease-in;
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
-#footerwrap a {
-    color: $neutral-color;
-}
- hr {
+
+hr {
     display: block;
     height: 1px;
     border: 0;
@@ -73,15 +67,36 @@ a:after {
 }
 
 .modal-title {
-	color: white
+	color: white;
+	    z-index:6001 !important;
+
 }
-
-
-
+.modal-dialog {
+    z-index:6001 !important;
+}
 
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
+
+.text-section {
+	padding: 3em 15px 3em 15px;
+    h2 {
+	  font-size: 2.1875em;
+	  text-align: center
+    }
+    h3 {
+	  font-size: 1.25em;
+	   text-align: left;
+    }
+    
+    h4 {
+	  font-size: .875em;
+	  color: $contrast-color;
+	  font-weight: 700;
+	  text-align: center;
+    }
+}
 
 #headerwrap {
 	background: url(../img/header-bg.jpg) no-repeat center top;
@@ -116,12 +131,26 @@ a:after {
     }
 }
 
+.inverted {
+    background-color: $primary-color;
+    color: white;
+    a, h2, h3 {
+        color: white;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+    
+}
+
+
 
 #foliowrap {
 	//background: url(../img/foliowrap.jpg) no-repeat center top;
 	//background-color: $primary-color;
 	margin-top: 0;
-	padding-top:50px;
+	padding-top:3em;
 	text-align:center;
 	/*
 	background-attachment: relative;
@@ -149,11 +178,11 @@ a:after {
 #skills-map {
     color: white;
     page-break-inside: avoid;
-    padding-top: 40px;
+	padding: 3em 15px 3em 15px;
 
     //background: url(../img/mint.jpg) center top;
     background-color: $primary-color;
-    padding-bottom: 3em;
+
     a, h2, h3 {
         color: white;
     }
@@ -164,67 +193,20 @@ a:after {
     
     
 }
-/*
-#testimonial h1 {
-	color: white;
-	font-size: 38px;
-}
 
-#testimonial h2 {
-	color: white;
-	font-size: 20px;
-	font-weight: 700;
-}
-*/
 #footerwrap {
     page-break-inside: avoid;
-
-	//background-color: #2f2f2f;
-	background-color: $primary-color;
-	color: white;
 	margin-top: 0;
 	padding-top: 40px;
 	padding-bottom: 60px;
 	text-align: left;
-}
-
-
-#footerwrap h3 {
-	font-size: 28px;
-	color: white;
-}
-#footerwrap h4 {
-    color: white;
-    
-}
-
-#footerwrap p {
-	color: white;
-	font-size: 18px;
-}
-
-.text-section {
-	padding-top: 40px;
 	
-    h2 {
-	  font-size: 35px;
-	  text-align: center
-    }
-    
-    h3 {
-	  font-size: 20px;
-	   text-align: left;
-    }
-    
-    h4 {
-	font-size: 14px;
-	color: $contrast-color;
-	font-weight: 700;
-	text-align: center;
-    }
-
-    
+	h3 { font-size: 28px; }
+	p { font-size: 18px; }
+	a { color: $neutral-color; }
 }
+
+
 
 
 .label {
@@ -239,59 +221,84 @@ a:after {
 /* ==========================================================================
    Image Mask
    ========================================================================== */
-
-.grid figure {
+.grid {
+  figure {
 	margin: 0;
 	position: relative;
-}
+    
+    img {
+	  width: 100%;
+	  display: block;
+	  position: relative;
+    }
+  }
 
-.grid figure img {
-	width: 100%;
-	display: block;
-	position: relative;
-}
-
-.grid figcaption {
+  figcaption {
 	position: absolute;
 	top: 0;
 	left: 0;
 	padding: 20px;
 	color: #fff;
 	background: $contrast-color;
+    
+    h5 {
+	  margin: 0;
+	  padding: 0 0 5px 20px;
+	  color: #fff;
+	  font-weight: 700;
+	  text-align: left;
+	  letter-spacing: 2px;
+    }
+    
+    a {
+      text-align: left;
+	  padding: 5px 10px;
+	  margin-left: 20px;
+	  display: inline-block;
+	  background: #2f2f2f;
+	  color: #fff;
+	  font-size: 13px; 
+    }
+  }
 }
 
-.grid figcaption h5 {
-	margin: 0;
-	padding-top: 0px;
-	padding-left: 20px;
-	padding-bottom: 5px;
-	color: #fff;
-	font-weight: 700;
-	text-align: left;
-	letter-spacing: 2px;
-	
-}
-
-.grid figcaption a {
-	text-align: left;
-	padding: 5px 10px;
-	margin-left: 20px;
-	display: inline-block;
-	background: #2f2f2f;
-	color: #fff;
-	font-size: 13px;
-}
 
 /* Caption Style */
-.mask figure {
-	overflow: hidden;
+.mask {
+  figure { 
+    overflow: hidden; 
+    img {
+	  -webkit-transition: -webkit-transform 0.4s;
+	  -moz-transition: -moz-transform 0.4s;
+	  transition: transform 0.4s;
+    }
+  }
+
+  figcaption {
+	height: 50px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+	
+	a {
+	  position: absolute;
+	  top:10px;
+	  bottom: 10px;
+	  right: 30px;
+    }
+  }
 }
 
-.mask figure img {
-	-webkit-transition: -webkit-transform 0.4s;
-	-moz-transition: -moz-transform 0.4s;
-	transition: transform 0.4s;
-}
 
 .no-touch .mask figure:hover img,
 .mask figure.cs-hover img {
@@ -299,21 +306,6 @@ a:after {
 	-moz-transform: translateY(-30px);
 	-ms-transform: translateY(-30px);
 	transform: translateY(-30px);
-}
-
-.mask figcaption {
-	height: 50px;
-	width: 100%;
-	top: auto;
-	bottom: 0;
-	opacity: 0;
-	-webkit-transform: translateY(100%);
-	-moz-transform: translateY(100%);
-	-ms-transform: translateY(100%);
-	transform: translateY(100%);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-	transition: transform 0.4s, opacity 0.1s 0.3s;
 }
 
 .no-touch .mask figure:hover figcaption,
@@ -328,23 +320,46 @@ a:after {
 	transition: transform 0.4s, opacity 0.1s;
 }
 
-.mask figcaption a {
-	position: absolute;
-	top:10px;
-	bottom: 10px;
-	right: 30px;
-}
-
 
 /* ==========================================================================
    Blog
    ========================================================================== */
 
 .accordion-heading {
-	margin-top: 30px;
-	padding-bottom: 10px;
-	text-align: left;
-	border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  
+  plus {
+    font-size: 30px;
+    font-weight: 700;
+    color: $contrast-color;
+    font-family: 'Raleway', sans-serif;
+    vertical-align: middle;
+  }
+  
+  date {
+	background-color: #2f2f2f;
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	padding: 8px; 
+  }
+  
+  a {
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	color: #333;
+  }
+  
+  a:hover {
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	color: $contrast-color;
+	text-decoration: none;
+  }
+
 }
 
 .accordion-inner h4 {
@@ -353,35 +368,6 @@ a:after {
     line-height: 28px;
     margin-bottom: 25px;
 	
-}
-
-.accordion-heading plus {
-	font-size: 30px;
-	font-weight: 700;
-	color: $contrast-color;
-	font-family: 'Raleway', sans-serif;
-	vertical-align: middle;
-}
-
-.accordion-heading date {
-	background-color: #2f2f2f;
-	color: white;
-	font-family: 'Lato', sans-serif;
-	font-size: 14px;
-	padding: 8px; 
-}
-
-.accordion-heading a {
-	font-family: 'Raleway', sans-serif;
-	font-size: 22px;
-	color: #333;
-}
-
-.accordion-heading a:hover {
-	font-family: 'Raleway', sans-serif;
-	font-size: 22px;
-	color: $contrast-color;
-	text-decoration: none;
 }
 
 /* ==========================================================================

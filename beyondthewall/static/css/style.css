@@ -3848,9 +3848,6 @@ p {
   line-height: 28px;
   margin-bottom: 25px; }
 
-.centered {
-  text-align: center; }
-
 /* Links */
 a {
   color: #2d3441;
@@ -3875,9 +3872,6 @@ a:after {
   -o-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in; }
 
-#footerwrap a {
-  color: #e9e9f7; }
-
 hr {
   display: block;
   height: 1px;
@@ -3891,11 +3885,29 @@ hr {
   color: white; }
 
 .modal-title {
-  color: white; }
+  color: white;
+  z-index: 6001 !important; }
+
+.modal-dialog  {
+  z-index: 6001 !important; }
 
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
+.text-section {
+  padding: 3em 15px 3em 15px; }
+  .text-section h2 {
+    font-size: 2.1875em;
+    text-align: center; }
+  .text-section h3 {
+    font-size: 1.25em;
+    text-align: left; }
+  .text-section h4 {
+    font-size: .875em;
+    color: #64758f;
+    font-weight: 700;
+    text-align: center; }
+
 #headerwrap {
   background: url(../img/header-bg.jpg) no-repeat center top;
   margin-top: -10px;
@@ -3923,9 +3935,18 @@ hr {
     #headerwrap h1 {
       font-size: 70px; } }
 
+.inverted {
+  background-color: #2d3441;
+  color: white; }
+  .inverted a, .inverted h2, .inverted h3 {
+    color: white; }
+  .inverted h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+
 #foliowrap {
   margin-top: 0;
-  padding-top: 50px;
+  padding-top: 3em;
   text-align: center;
   	/*
   	background-attachment: relative;
@@ -3950,60 +3971,26 @@ hr {
 #skills-map {
   color: white;
   page-break-inside: avoid;
-  padding-top: 40px;
-  background-color: #2d3441;
-  padding-bottom: 3em; }
+  padding: 3em 15px 3em 15px;
+  background-color: #2d3441; }
   #skills-map a, #skills-map h2, #skills-map h3 {
     color: white; }
   #skills-map h2 {
     text-align: center;
     margin-bottom: 1em; }
 
-/*
-#testimonial h1 {
-	color: white;
-	font-size: 38px;
-}
-
-#testimonial h2 {
-	color: white;
-	font-size: 20px;
-	font-weight: 700;
-}
-*/
 #footerwrap {
   page-break-inside: avoid;
-  background-color: #2d3441;
-  color: white;
   margin-top: 0;
   padding-top: 40px;
   padding-bottom: 60px;
   text-align: left; }
-
-#footerwrap h3 {
-  font-size: 28px;
-  color: white; }
-
-#footerwrap h4 {
-  color: white; }
-
-#footerwrap p {
-  color: white;
-  font-size: 18px; }
-
-.text-section {
-  padding-top: 40px; }
-  .text-section h2 {
-    font-size: 35px;
-    text-align: center; }
-  .text-section h3 {
-    font-size: 20px;
-    text-align: left; }
-  .text-section h4 {
-    font-size: 14px;
-    color: #64758f;
-    font-weight: 700;
-    text-align: center; }
+  #footerwrap h3 {
+    font-size: 28px; }
+  #footerwrap p {
+    font-size: 18px; }
+  #footerwrap a {
+    color: #e9e9f7; }
 
 .label {
   padding-bottom: 15px; }
@@ -4017,12 +4004,10 @@ hr {
 .grid figure {
   margin: 0;
   position: relative; }
-
-.grid figure img {
-  width: 100%;
-  display: block;
-  position: relative; }
-
+  .grid figure img {
+    width: 100%;
+    display: block;
+    position: relative; }
 .grid figcaption {
   position: absolute;
   top: 0;
@@ -4030,42 +4015,29 @@ hr {
   padding: 20px;
   color: #fff;
   background: #64758f; }
-
-.grid figcaption h5 {
-  margin: 0;
-  padding-top: 0px;
-  padding-left: 20px;
-  padding-bottom: 5px;
-  color: #fff;
-  font-weight: 700;
-  text-align: left;
-  letter-spacing: 2px; }
-
-.grid figcaption a {
-  text-align: left;
-  padding: 5px 10px;
-  margin-left: 20px;
-  display: inline-block;
-  background: #2f2f2f;
-  color: #fff;
-  font-size: 13px; }
+  .grid figcaption h5 {
+    margin: 0;
+    padding: 0 0 5px 20px;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 2px; }
+  .grid figcaption a {
+    text-align: left;
+    padding: 5px 10px;
+    margin-left: 20px;
+    display: inline-block;
+    background: #2f2f2f;
+    color: #fff;
+    font-size: 13px; }
 
 /* Caption Style */
 .mask figure {
   overflow: hidden; }
-
-.mask figure img {
-  -webkit-transition: -webkit-transform 0.4s;
-  -moz-transition: -moz-transform 0.4s;
-  transition: transform 0.4s; }
-
-.no-touch .mask figure:hover img,
-.mask figure.cs-hover img {
-  -webkit-transform: translateY(-30px);
-  -moz-transform: translateY(-30px);
-  -ms-transform: translateY(-30px);
-  transform: translateY(-30px); }
-
+  .mask figure img {
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s; }
 .mask figcaption {
   height: 50px;
   width: 100%;
@@ -4079,6 +4051,18 @@ hr {
   -webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
   -moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
   transition: transform 0.4s, opacity 0.1s 0.3s; }
+  .mask figcaption a {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    right: 30px; }
+
+.no-touch .mask figure:hover img,
+.mask figure.cs-hover img {
+  -webkit-transform: translateY(-30px);
+  -moz-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px); }
 
 .no-touch .mask figure:hover figcaption,
 .mask figure.cs-hover figcaption {
@@ -4091,12 +4075,6 @@ hr {
   -moz-transition: -moz-transform 0.4s, opacity 0.1s;
   transition: transform 0.4s, opacity 0.1s; }
 
-.mask figcaption a {
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  right: 30px; }
-
 /* ==========================================================================
    Blog
    ========================================================================== */
@@ -4105,37 +4083,33 @@ hr {
   padding-bottom: 10px;
   text-align: left;
   border-bottom: 1px solid #ccc; }
+  .accordion-heading plus {
+    font-size: 30px;
+    font-weight: 700;
+    color: #64758f;
+    font-family: 'Raleway', sans-serif;
+    vertical-align: middle; }
+  .accordion-heading date {
+    background-color: #2f2f2f;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    padding: 8px; }
+  .accordion-heading a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    color: #333; }
+  .accordion-heading a:hover {
+    font-family: 'Raleway', sans-serif;
+    font-size: 22px;
+    color: #64758f;
+    text-decoration: none; }
 
 .accordion-inner h4 {
   font-family: 'Lato', sans-serif;
   font-size: 20px;
   line-height: 28px;
   margin-bottom: 25px; }
-
-.accordion-heading plus {
-  font-size: 30px;
-  font-weight: 700;
-  color: #64758f;
-  font-family: 'Raleway', sans-serif;
-  vertical-align: middle; }
-
-.accordion-heading date {
-  background-color: #2f2f2f;
-  color: white;
-  font-family: 'Lato', sans-serif;
-  font-size: 14px;
-  padding: 8px; }
-
-.accordion-heading a {
-  font-family: 'Raleway', sans-serif;
-  font-size: 22px;
-  color: #333; }
-
-.accordion-heading a:hover {
-  font-family: 'Raleway', sans-serif;
-  font-size: 22px;
-  color: #64758f;
-  text-decoration: none; }
 
 /* ==========================================================================
    Forms
@@ -4193,7 +4167,7 @@ hr {
   width: 100%;
   height: 60px;
   font-size: 13px;
-  z-index: 4000; }
+  z-index: 1000; }
 
 .gn-menu-main a {
   display: block;
@@ -4285,7 +4259,6 @@ hr {
 
 input.gn-search {
   position: relative;
-  z-index: 4010;
   padding-left: 60px;
   outline: none;
   border: none;
