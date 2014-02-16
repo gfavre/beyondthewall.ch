@@ -3667,8 +3667,8 @@ button.close {
     display: none !important; } }
 @font-face {
   font-family: 'icomoon';
-  src: url("../fonts/icomoon73333/icomoon.eot?zi429o");
-  src: url("../fonts/icomoon73333/icomoon.eot?#iefixzi429o") format("embedded-opentype"), url("../fonts/icomoon73333/icomoon.woff?zi429o") format("woff"), url("../fonts/icomoon73333/icomoon.ttf?zi429o") format("truetype"), url("../fonts/icomoon73333/icomoon.svg?zi429o#icomoon") format("svg");
+  src: url("../fonts/icomoon/icomoon.eot?yej11a");
+  src: url("../fonts/icomoon/icomoon.eot?#iefixyej11a") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff?yej11a") format("woff"), url("../fonts/icomoon/icomoon.ttf?yej11a") format("truetype"), url("../fonts/icomoon/icomoon.svg?yej11a#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -3783,6 +3783,9 @@ button.close {
 .icon-bubbles:before {
   content: "\e152"; }
 
+.icon-arrow-right:before {
+  content: "\e40d"; }
+
 .icon-phone:before {
   content: "\e61d"; }
 
@@ -3843,6 +3846,15 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   color: #333; }
 
+h2 {
+  font-size: 2.1875em;
+  text-align: center;
+  margin-bottom: 1em; }
+
+h3 {
+  font-size: 1.25em;
+  text-align: left; }
+
 /* Paragraph & Typographic */
 p {
   line-height: 28px;
@@ -3879,17 +3891,6 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0; }
-
-.modal-header {
-  background-color: #64758f;
-  color: white; }
-
-.modal-title {
-  color: white;
-  z-index: 6001 !important; }
-
-.modal-dialog  {
-  z-index: 6001 !important; }
 
 /* ==========================================================================
    Wrap Sections
@@ -3940,14 +3941,13 @@ hr {
   color: white; }
   .inverted a, .inverted h2, .inverted h3 {
     color: white; }
-  .inverted h2 {
-    text-align: center;
-    margin-bottom: 1em; }
+
+#about h2, #why-me h2 {
+  margin-bottom: 0; }
 
 #foliowrap {
   margin-top: 0;
   padding-top: 3em;
-  text-align: center;
   	/*
   	background-attachment: relative;
   	background-position: center center;
@@ -3975,9 +3975,6 @@ hr {
   background-color: #2d3441; }
   #skills-map a, #skills-map h2, #skills-map h3 {
     color: white; }
-  #skills-map h2 {
-    text-align: center;
-    margin-bottom: 1em; }
 
 #footerwrap {
   page-break-inside: avoid;
@@ -4001,6 +3998,17 @@ hr {
 /* ==========================================================================
    Image Mask
    ========================================================================== */
+.modal-header {
+  background-color: #64758f;
+  color: white; }
+
+.modal-title {
+  color: white;
+  z-index: 6001 !important; }
+
+.modal-dialog  {
+  z-index: 6001 !important; }
+
 .grid figure {
   margin: 0;
   position: relative; }
@@ -4022,14 +4030,6 @@ hr {
     font-weight: 700;
     text-align: left;
     letter-spacing: 2px; }
-  .grid figcaption a {
-    text-align: left;
-    padding: 5px 10px;
-    margin-left: 20px;
-    display: inline-block;
-    background: #2f2f2f;
-    color: #fff;
-    font-size: 13px; }
 
 /* Caption Style */
 .mask figure {

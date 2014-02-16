@@ -16,6 +16,17 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     color: #333;
 }
+h2 {
+  font-size: 2.1875em;
+  text-align: center;
+  margin-bottom: 1em;
+
+}
+
+h3 {
+  font-size: 1.25em;
+  text-align: left;
+}
 
 
 /* Paragraph & Typographic */
@@ -61,23 +72,11 @@ hr {
     padding: 0;
 }
 
-.modal-header {
-	background-color: $contrast-color;
-	color: white;
-}
-
-.modal-title {
-	color: white;
-	    z-index:6001 !important;
-
-}
-.modal-dialog {
-    z-index:6001 !important;
-}
 
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
+
 
 .text-section {
 	padding: 3em 15px 3em 15px;
@@ -137,21 +136,20 @@ hr {
     a, h2, h3 {
         color: white;
     }
-    h2 {
-        text-align: center;
-        margin-bottom: 1em;
-    }
     
 }
 
-
+#about, #why-me {
+    h2{
+        margin-bottom: 0;
+    }
+}
 
 #foliowrap {
 	//background: url(../img/foliowrap.jpg) no-repeat center top;
 	//background-color: $primary-color;
 	margin-top: 0;
 	padding-top:3em;
-	text-align:center;
 	/*
 	background-attachment: relative;
 	background-position: center center;
@@ -185,12 +183,7 @@ hr {
 
     a, h2, h3 {
         color: white;
-    }
-    h2 {
-        text-align: center;
-        margin-bottom: 1em;
-    }
-    
+    }    
     
 }
 
@@ -221,6 +214,22 @@ hr {
 /* ==========================================================================
    Image Mask
    ========================================================================== */
+
+.modal-header {
+	background-color: $contrast-color;
+	color: white;
+}
+
+.modal-title {
+	color: white;
+	    z-index:6001 !important;
+
+}
+.modal-dialog {
+    z-index:6001 !important;
+}
+
+
 .grid {
   figure {
 	margin: 0;
@@ -250,15 +259,6 @@ hr {
 	  letter-spacing: 2px;
     }
     
-    a {
-      text-align: left;
-	  padding: 5px 10px;
-	  margin-left: 20px;
-	  display: inline-block;
-	  background: #2f2f2f;
-	  color: #fff;
-	  font-size: 13px; 
-    }
   }
 }
 
