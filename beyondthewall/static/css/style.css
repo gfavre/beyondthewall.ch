@@ -4022,15 +4022,15 @@ hr {
   color: white;
   font-size: 18px; }
 
-.about {
+.text-section {
   padding-top: 40px; }
-  .about h2 {
+  .text-section h2 {
     font-size: 35px;
     text-align: center; }
-  .about h3 {
+  .text-section h3 {
     font-size: 20px;
     text-align: left; }
-  .about h4 {
+  .text-section h4 {
     font-size: 14px;
     color: #64758f;
     font-weight: 700;
