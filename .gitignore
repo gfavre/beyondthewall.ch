@@ -25,3 +25,4 @@ fabsettings.py
 # Vim swap files
 .*.sw?
 
+dev.sqlite

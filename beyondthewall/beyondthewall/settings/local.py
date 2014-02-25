@@ -39,6 +39,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': '/Users/grfavre/Documents/Beyond the Wall/beyondthewall.ch/dev.sqlite',
+        'ATOMIC_REQUESTS': True,    
     }
 }
 
@@ -67,7 +68,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation
 MIDDLEWARE_CLASSES += (
-    #'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 # See: https://github.com/django-debug-toolbar/django-debug-toolbar#installation

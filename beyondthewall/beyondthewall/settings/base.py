@@ -207,8 +207,9 @@ DJANGO_APPS = (
     # 'django.contrib.humanize',
 
     # Admin panel and documentation:
-    #'django.contrib.admin',
-    # 'django.contrib.admindocs',
+    'django.contrib.admin',
+    'django.contrib.comments',
+    
 )
 
 THIRD_PARTY_APPS = (
@@ -216,6 +217,9 @@ THIRD_PARTY_APPS = (
     'south',
     'sekizai',
     'compressor',
+    'tagging',
+    'mptt',
+    'zinnia',
 )
 
 # Apps specific for this project go here.
