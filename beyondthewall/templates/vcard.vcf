@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Favre;Gregory;;;
+FN:Gregory Favre
+ORG:Beyond the Wall;
+EMAIL;type=INTERNET;type=WORK:info@beyondthewall.ch
+TEL;type=WORK;type=VOICE:+41 79 599 09 06
+item1.ADR;type=WORK;type=pref:;;Rue de Riant-Coteau 134;Gland;VD;1196;Switzerland
+item1.X-ABADR:ch
+X-SOCIALPROFILE;type=twitter:http://twitter.com/FavreGregory
+URL;type=WORK:http://www.beyondthewall.ch
+END:VCARD
