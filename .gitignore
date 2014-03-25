@@ -27,3 +27,7 @@ fabsettings.py
 
 # SQlite
 *.sqlite
+
+# testing
+.coverage
+

@@ -1,9 +1,11 @@
 from django.core.mail import EmailMessage
+from django.conf import settings
 
 from contact_form.forms import ContactForm
 
 
 class BeyondContactForm(ContactForm):
+    recipient_list = ['%s <%s>' % mail_tuple for mail_tuple in settings.MANAGERS]
     
     def get_message_dict(self):
         if not self.is_valid():
