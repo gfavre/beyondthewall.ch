@@ -1,5 +1,5 @@
 Django==2.0.5
-bpython==0.12
+bpython==0.17.1
 django-braces==1.2.2
 django-model-utils==1.4.0
 logutils==0.3.3
