@@ -3,4 +3,4 @@
 -r base.txt
 
 gunicorn==19.8.1
-django-redis==3.5.1
+django-redis==4.9.0
