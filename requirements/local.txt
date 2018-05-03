@@ -4,4 +4,4 @@ coverage==4.5.1
 django-discover-runner==1.0
 django-debug-toolbar==1.9.1
 Sphinx==1.7.4
-fabric==1.8.3
+fabric==1.14.0
