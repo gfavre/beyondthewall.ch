@@ -67,6 +67,13 @@ DATABASES = {
         'OPTIONS': {'autocommit': True,}
     }
 }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/Users/grfavre/Documents/Projets/beyondthewall.ch/dev.sqlite',
+    }
+}
+
 
 ########## END DATABASE CONFIGURATION
 
