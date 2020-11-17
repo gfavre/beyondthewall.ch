@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load staticfiles sekizai_tags compress %}
+{% load staticfiles sekizai_tags %}
 
 {% block title %}Beyond the Wall - développement informatique sur mesure{% endblock title %}
 
@@ -74,10 +74,9 @@
 {% endblock content %}
 
 {% block extra_js %}
-{% compress js %}
-<script src="{% static 'js/jquery.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{% static 'js/bootstrap.js' %}"></script>
-<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
 <script src="{% static 'js/modernizr.custom.js' %}"></script>
 <script src="{% static 'js/retina.js' %}"></script>
 <script src="{% static 'js/classie.js' %}"></script>
@@ -114,5 +113,4 @@ $(document).ready(function(){
   });
 });    
 </script>
-{% endcompress %}
 {% endblock extra_js %}
