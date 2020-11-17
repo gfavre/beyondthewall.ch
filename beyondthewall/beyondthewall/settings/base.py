@@ -170,6 +170,16 @@ TEMPLATE_LOADERS = (
 TEMPLATE_DIRS = (
     normpath(join(SITE_ROOT, 'templates')),
 )
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'APP_DIRS': True,
+        'DIRS': [
+            normpath(join(SITE_ROOT, 'templates')),
+        ],
+    },
+]
+
 ########## END TEMPLATE CONFIGURATION
 
 
