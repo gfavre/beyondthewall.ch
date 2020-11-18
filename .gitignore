@@ -31,3 +31,4 @@ fabsettings.py
 # testing
 .coverage
 
+staticfiles/

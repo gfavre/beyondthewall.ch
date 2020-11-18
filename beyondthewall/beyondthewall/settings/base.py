@@ -22,10 +22,11 @@ def get_env_setting(setting):
 
 ########## PATH CONFIGURATION
 # Absolute filesystem path to the Django project directory:
-DJANGO_ROOT = dirname(dirname(abspath(__file__)))
-
+DJANGO_ROOT = dirname(dirname(dirname(abspath(__file__))))
+print('DJANGO_ROOT: %s' % DJANGO_ROOT)
 # Absolute filesystem path to the top-level project folder:
 SITE_ROOT = dirname(DJANGO_ROOT)
+print('SITE_ROOT: %s' % SITE_ROOT)
 
 # Site name:
 SITE_NAME = basename(DJANGO_ROOT)
@@ -103,7 +104,7 @@ MEDIA_URL = '/media/'
 
 ########## STATIC FILE CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
+STATIC_ROOT = normpath(join(SITE_ROOT, 'staticfiles'))
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = '/static/'
@@ -116,7 +117,9 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
+STATICFILES_DIRS = [
+    join(DJANGO_ROOT, "static"),
+]
 ########## END STATIC FILE CONFIGURATION
 
 
@@ -173,7 +176,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'APP_DIRS': True,
         'DIRS': [
-            normpath(join(SITE_ROOT, 'templates')),
+            normpath(join(DJANGO_ROOT, 'templates')),
         ],
     },
 ]

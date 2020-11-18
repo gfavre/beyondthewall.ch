@@ -10,6 +10,8 @@ from base import *
 from django.core.exceptions import ImproperlyConfigured
 
 
+DEBUG=True
+
 def get_env_setting(setting):
     """ Get the environment setting or return exception """
     try:
@@ -101,13 +103,8 @@ CACHES = {
 
 ########## MEDIA CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = get_env_setting('MEDIA_ROOT')
 CKEDITOR_UPLOAD_PATH = MEDIA_ROOT
 
-
-########## STATIC FILE CONFIGURATION
-# See: https://docs.djangoproject.com/en/dev/ref/settings/#static-root
-STATIC_ROOT = get_env_setting('STATIC_ROOT')
 
 ########## END STATIC FILE CONFIGURATION
 COMPRESS_ENABLED=True
