@@ -1,10 +1,14 @@
 from django.core.mail import EmailMessage
 from django.conf import settings
 
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV3
 from contact_form.forms import ContactForm
 
 
 class BeyondContactForm(ContactForm):
+    captcha = ReCaptchaField(widget=ReCaptchaV3)
+
     recipient_list = ['%s <%s>' % mail_tuple for mail_tuple in settings.MANAGERS]
     
     def get_message_dict(self):

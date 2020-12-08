@@ -1,8 +1,6 @@
 """Production settings and globals."""
 
 
-from os import environ
-
 from base import *
 
 # Normally you should not import ANYTHING from Django directly
@@ -10,7 +8,7 @@ from base import *
 from django.core.exceptions import ImproperlyConfigured
 
 DEBUG = environ.get('DEBUG', False)
-TEMPLATE_DEBUG = DEBUG
+
 
 def get_env_setting(setting):
     """ Get the environment setting or return exception """
@@ -19,6 +17,7 @@ def get_env_setting(setting):
     except KeyError:
         error_msg = "Set the %s env variable" % setting
         raise ImproperlyConfigured(error_msg)
+
 
 INSTALLED_APPS += ('gunicorn',)
 
